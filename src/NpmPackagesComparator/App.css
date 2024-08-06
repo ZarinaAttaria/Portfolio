@@ -1,0 +1,287 @@
+body {
+  height: auto;
+  width: 100%;
+}
+.Packages_List {
+  list-style: none;
+}
+.searchInput {
+  width: 70%;
+  margin: 20px;
+}
+.search_Btn {
+  height: 50%;
+  margin: 20px;
+}
+.crossIcon {
+  justify-self: end;
+}
+.Selected_Item {
+  display: flex;
+  flex-direction: row;
+
+  border-style: solid;
+  border-width: 3px;
+  width: 10%;
+}
+.selectedItemsList {
+  display: flex;
+}
+.vs_heading {
+  margin: 15px;
+}
+
+.recommendation-header {
+  margin: 30px;
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.highlight {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  font-weight: 500;
+  font-size: 20px;
+  gap: 0.5%;
+}
+.packageName {
+}
+.recommendation-heading {
+  margin: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.recommendation-card {
+  margin: 30px;
+
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.recommended-package {
+  color: blue;
+}
+.badge {
+  background-color: rgb(39, 111, 219);
+  height: 30%;
+  margin-top: 5px;
+}
+.recommended-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+.description {
+  color: rgb(87, 83, 83);
+}
+.stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.chart-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+.comparison-heading {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.suggestions-container {
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  border: 1px solid #ddd;
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0;
+}
+
+.list-group-item.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.no-suggestions {
+  text-align: center;
+  color: #999;
+}
+.search-input-container {
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.vs-heading {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #333;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #218838;
+}
+
+.selected-packages-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.selected-package-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+}
+
+.remove-icon {
+  margin-left: auto;
+  cursor: pointer;
+  color: black;
+}
+
+.remove-icon:hover {
+  color: #c82333;
+}
+
+.no-packages-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.table thead {
+  background-color: #e3f2fd;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #d4d9db;
+}
+
+.table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+.navbar-brand {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+}
+
+.downloads-Filter {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 2%;
+}
+.stats-item {
+  display: flex;
+  flex-direction: column;
+}
+.stats {
+  display: flex;
+
+  flex-direction: row;
+  gap: 2%;
+  justify-content: flex-end;
+}
+.icon {
+  height: 2.5%;
+  width: 2.5%;
+}
+.navbar {
+  background-color: #e3f2fd !important;
+}
+.logo {
+  height: 5%;
+  width: 5%;
+}
+.link-icon {
+  margin-left: 10%;
+}

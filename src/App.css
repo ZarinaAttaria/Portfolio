@@ -1,0 +1,47 @@
+body {
+  width: 100%;
+  height: auto;
+}
+.nav-link {
+  color: white !important;
+}
+.navItemsList {
+  list-style: none !important;
+}
+.nav-item {
+  list-style: none !important;
+}
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+.sidebarList {
+  font-weight: 800;
+  text-align: center;
+}
+.sidebar h1 a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar h1 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
