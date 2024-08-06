@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./productDetail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "react-router-dom";
 
-function ProductDetail({ selectedProduct, handleAddToCart }) {
+function ProductDetail({ handleAddToCart }) {
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const response = await fetch(`https://dummyjson.com/products/${id}`);
+      const data = await response.json();
+      setProduct(data);
+    };
+
+    fetchProduct();
+  }, [id]);
+
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -39,48 +53,43 @@ function ProductDetail({ selectedProduct, handleAddToCart }) {
           ></button>
         </div>
         <div className="offcanvas-body">
-          {selectedProduct && (
+          {product && (
             <>
               <img
-                src={selectedProduct.images[0]}
-                alt={selectedProduct.title}
+                src={product.images[0]}
+                alt={product.title}
                 className="product-image"
               />
-              <h4 className="product-title">{selectedProduct.title}</h4>
-              <p className="product-description">
-                {selectedProduct.description}
-              </p>
+              <h4 className="product-title">{product.title}</h4>
+              <p className="product-description">{product.description}</p>
               <p className="product-brand">
-                Brand:{" "}
-                {selectedProduct.brand ? selectedProduct.brand : "No brand"}
+                Brand: {product.brand ? product.brand : "No brand"}
               </p>
 
               <div className="product-rating">
-                Rating: {renderStars(selectedProduct.rating)}
+                Rating: {renderStars(product.rating)}
               </div>
               <div className="product-price-container">
-                <h6 className="productPrice">
-                  Price: Rs {selectedProduct.price}
-                </h6>
+                <h6 className="productPrice">Price: Rs {product.price}</h6>
               </div>
 
               <button
                 className="btn btn-primary add-to-cart"
-                onClick={() => handleAddToCart(selectedProduct)}
+                onClick={() => handleAddToCart(product)}
               >
                 Add to Cart
               </button>
 
               <h3 className="reviewAndRatingHeading">Reviews & Ratings</h3>
               <div className="product-rating-summary">
-                <h4>{selectedProduct.rating}</h4>
+                <h4>{product.rating}</h4>
 
-                <div>{renderStars(selectedProduct.rating)}</div>
-                <h6>{selectedProduct.reviews.length} ratings</h6>
+                <div>{renderStars(product.rating)}</div>
+                <h6>{product.reviews?.length} ratings</h6>
               </div>
 
               <div className="reviews">
-                {selectedProduct.reviews.map((item, index) => (
+                {product.reviews?.map((item, index) => (
                   <div key={index} className="review-item">
                     <p className="review-author">{item.reviewerName}</p>
                     <div className="review-rating">

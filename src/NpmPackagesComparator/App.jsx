@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+
 import "./App.css";
 import {
   addPackage,
@@ -161,7 +162,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="main_container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
           <img src="logo (2).png" className="logo" />
           <a className="navbar-brand" href="#">

@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-function ProductCard({ products, handleMoreDetails, handleAddToCart }) {
+function ProductCard({ products, handleAddToCart }) {
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -17,6 +18,7 @@ function ProductCard({ products, handleMoreDetails, handleAddToCart }) {
     }
     return stars;
   };
+
   return (
     <div className="container">
       {products.map((product) => (
@@ -39,16 +41,12 @@ function ProductCard({ products, handleMoreDetails, handleAddToCart }) {
               Add to Cart
             </a>
 
-            <a
+            <Link
+              to={`/product/${product.id}`}
               className="btn btn-primary productDetailButton"
-              data-bs-toggle="offcanvas"
-              href="#offcanvasExample"
-              role="button"
-              aria-controls="offcanvasExample"
-              onClick={() => handleMoreDetails(product)}
             >
               More Details
-            </a>
+            </Link>
           </div>
         </div>
       ))}

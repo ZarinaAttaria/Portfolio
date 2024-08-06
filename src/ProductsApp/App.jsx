@@ -9,6 +9,7 @@ import Cart from "./Cart.jsx";
 import Sort from "./Sort.jsx";
 import _ from "lodash";
 import { toast, Toaster } from "react-hot-toast";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -108,10 +109,6 @@ function App() {
     debouncedSearch();
   };
 
-  const handleMoreDetails = (product) => {
-    setSelectedProduct(product);
-  };
-
   const handleAddToCart = (product) => {
     const productIndex = cart?.findIndex((p) => p.id === product.id);
     if (productIndex > -1) {
@@ -158,16 +155,22 @@ function App() {
         />
       </div>
 
-      <ProductCard
-        products={products}
-        handleMoreDetails={handleMoreDetails}
-        handleAddToCart={handleAddToCart}
-      />
-
-      <ProductDetail
-        selectedProduct={selectedProduct}
-        handleAddToCart={handleAddToCart}
-      />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <ProductCard
+              products={products}
+              handleAddToCart={handleAddToCart}
+            />
+          }
+        />
+        <Route
+          path="/product/:id"
+          element={<ProductDetail handleAddToCart={handleAddToCart} />}
+        />
+      </Routes>
 
       <Cart cart={cart} isCartIcon={isCartIcon} setCart={setCart} />
 

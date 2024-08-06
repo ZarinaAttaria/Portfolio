@@ -12,6 +12,9 @@ function HomePage() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
           unde voluptatem beatae{" "}
         </p>
+        <a href="" target="_blank">
+          {/* <FontAwesomeIcon icon={faCoffee} size="2x" /> */}
+        </a>
       </div>
     </>
   );
