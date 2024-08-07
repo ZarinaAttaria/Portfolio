@@ -125,3 +125,8 @@
   width: 30%;
   background-color: rgb(15, 15, 138);
 }
+@media (max-width: 768px) {
+  .offcanvas {
+    margin-top: 56px;
+  }
+}

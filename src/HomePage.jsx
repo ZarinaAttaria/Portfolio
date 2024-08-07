@@ -45,7 +45,7 @@ function HomePage() {
             <img src="facebook.png" className="icon1" />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/zzareena__/?igsh=enVpZGFqazI5bWVq"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -243,10 +243,10 @@ body {
     max-width: 800px;
   }
 }
-@media (min-width: 1285px) {
+@media (min-width: 1300px) {
   .content-container {
     flex-direction: row;
-    padding: 40px;
+    /* padding: 40px; */
   }
 
   .sidebar {

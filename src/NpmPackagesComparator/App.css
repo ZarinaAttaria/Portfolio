@@ -348,3 +348,10 @@ body {
     width: 50%;
   }
 }
+@media (min-width: 1300px) {
+  .link-icon {
+    /* margin-left: 10%; */
+    height: 15%;
+    width: 15%;
+  }
+}

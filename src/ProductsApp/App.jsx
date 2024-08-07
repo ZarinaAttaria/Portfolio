@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Cart from "./Cart";
 import Sort from "./Sort";
 import _ from "lodash";
-// import { toast, Toaster } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -115,7 +115,7 @@ function App() {
     const updatedCart = [...cart];
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    // toast.success("Item added to cart!");
+    toast.success("Item added to cart!");
   };
 
   const handleCart = () => {
@@ -135,7 +135,7 @@ function App() {
           path="/"
           element={
             <div className="Main_Container">
-              {/* <Toaster position="top-center" reverseOrder={false} /> */}
+              <Toaster position="top-center" reverseOrder={false} />
               <div className="d-flex align-items-center justify-content-end">
                 <Sort setSort={setSort} setSortOrder={setSortOrder} />
                 <Pagination

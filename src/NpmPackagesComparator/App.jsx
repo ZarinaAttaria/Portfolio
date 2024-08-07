@@ -144,30 +144,24 @@ function App() {
 
   return (
     <>
-      <div className="main_container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-          <img
-            src="https://npmtrends.com/images/logos/npm_trends_logo.png"
-            className="npmlogo"
-          />
-          <a className="navbar-brand" href="#">
-            Npm Packages Comparator
-          </a>
-        </nav>
-        <SearchInput
-          searchPackage={searchPackage}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+        <a className="navbar-brand" href="#">
+          Npm Packages Comparator
+        </a>
+      </nav>
+      <SearchInput
+        searchPackage={searchPackage}
+        selectedPackages={selectedPackages}
+        handleSelectedPackage={handleSelectedPackage}
+      />
+      {showComparisonTable && <ComparisonTable data={selectedPackages} />}
+      {selectedPackages.length > 0 && (
+        <DownloadsChart
+          data={historicalDownloads}
           selectedPackages={selectedPackages}
-          handleSelectedPackage={handleSelectedPackage}
         />
-        {showComparisonTable && <ComparisonTable data={selectedPackages} />}
-        {selectedPackages.length > 0 && (
-          <DownloadsChart
-            data={historicalDownloads}
-            selectedPackages={selectedPackages}
-          />
-        )}
-        {showComparisonTable && <Recommendations />}
-      </div>
+      )}
+      {showComparisonTable && <Recommendations />}
     </>
   );
 }
