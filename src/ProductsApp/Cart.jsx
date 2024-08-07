@@ -1,5 +1,5 @@
 import React from "react";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "./Cart.css";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +11,7 @@ function Cart({ isCartIcon, cart, setCart }) {
     myCart.splice(index, 1);
     setCart(myCart);
     localStorage.setItem("cart", JSON.stringify(myCart));
-    // toast.success("Item removed from cart!");
+    toast.success("Item removed from cart!");
   };
 
   const increaseQuantity = (pid) => {
@@ -47,7 +47,7 @@ function Cart({ isCartIcon, cart, setCart }) {
   const handleClearCart = () => {
     setCart([]);
     localStorage.setItem("cart", JSON.stringify([]));
-    // toast.success("Cart has been cleared!");
+    toast.success("Cart has been cleared!");
   };
   return (
     <div

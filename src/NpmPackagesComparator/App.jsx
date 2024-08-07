@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import "./App.css";
 import {
   addPackage,
@@ -40,7 +39,7 @@ function App() {
     (state) => state.packages.downloadsFilter
   );
   const dispatch = useDispatch();
-  const dataResults = [];
+
   const searchPackage = async (query) => {
     if (!query) return;
     const response = await fetch(`https://api.npms.io/v2/search?q=${query}`);
@@ -62,14 +61,6 @@ function App() {
       `https://api.npmjs.org/downloads/range/${downloadsFilter}/${pkg}`
     );
     const data = await response.json();
-    console.log(
-      "Fetched data for package:",
-      pkg,
-      "with filter:",
-      downloadsFilter,
-      data
-    );
-
     if (data.downloads && Array.isArray(data.downloads)) {
       return data.downloads.map((item) => ({
         ...item,
@@ -89,7 +80,6 @@ function App() {
         allHistoricalData = allHistoricalData.concat(historicalDownloadsData);
       }
     }
-    console.log("All historical data:", allHistoricalData);
     dispatch(setHistoricalDownloads(allHistoricalData));
   };
 
@@ -100,7 +90,6 @@ function App() {
       return;
     }
     const data = await response.json();
-
     const description =
       data.collected?.metadata?.description || "No description";
     const repository =
@@ -110,22 +99,18 @@ function App() {
     const stars = data.collected?.github?.starsCount || "Unknown";
     const issues = data.collected?.github?.issues?.count || "Unknown";
     const version = data.collected?.metadata?.version || "Unknown";
-
     const size = data.collected?.source?.files?.readmeSize || "Unknown";
     const carefullness = data.score?.detail?.quality || 0;
     const communityInterest = data.score?.detail?.popularity || 0;
-
     const dependenciesObj = data.collected?.metadata?.dependencies || {};
     const dependencies = Object.keys(dependenciesObj).map((dep) => ({
       name: dep,
       version: dependenciesObj[dep],
     }));
-
     const health = data.evaluation?.quality?.health || 0;
 
     if (!selectedPackages.some((p) => p.packageName === pkg)) {
       const downloads = await fetchDownloads(pkg);
-
       const newPackage = {
         packageName: pkg,
         downloads,
@@ -136,13 +121,11 @@ function App() {
         dependencies,
         version,
         description,
-
         size,
         communityInterest,
         carefullness,
         health,
       };
-
       dispatch(addPackage(newPackage));
       await updateHistoricalDownloads();
     } else {
@@ -157,7 +140,6 @@ function App() {
     } else {
       dispatch(setHistoricalDownloads([]));
     }
-    console.log("All historical downloads: ", historicalDownloads);
   }, [selectedPackages, dispatch, downloadsFilter]);
 
   return (
@@ -177,18 +159,14 @@ function App() {
           selectedPackages={selectedPackages}
           handleSelectedPackage={handleSelectedPackage}
         />
-
-        {showComparisonTable ? <ComparisonTable data={selectedPackages} /> : ""}
-
-        {selectedPackages.length > 0 ? (
+        {showComparisonTable && <ComparisonTable data={selectedPackages} />}
+        {selectedPackages.length > 0 && (
           <DownloadsChart
             data={historicalDownloads}
             selectedPackages={selectedPackages}
           />
-        ) : (
-          " "
         )}
-        {showComparisonTable ? <Recommendations /> : ""}
+        {showComparisonTable && <Recommendations />}
       </div>
     </>
   );

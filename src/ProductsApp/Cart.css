@@ -9,7 +9,9 @@
   padding: 20px;
   background-color: #f8f9fa;
 }
-
+.offcanvas {
+  margin-top: 56px;
+}
 .cart-item {
   display: flex;
   align-items: center;

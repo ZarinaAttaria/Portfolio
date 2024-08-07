@@ -24,7 +24,7 @@ function HomePage() {
 
         <div className="iconsLinks">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/zarina-attaria-a2134427a"
             target="_blank"
             rel="noopener noreferrer"
           >

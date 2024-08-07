@@ -14,7 +14,7 @@ body {
   justify-items: center;
 }
 .Main_Container {
-  width: 92%;
+  width: 100%;
 }
 
 .card {
@@ -80,6 +80,8 @@ body {
 }
 
 .navbar {
+  z-index: 1040;
+
   background-color: black !important;
 }
 
