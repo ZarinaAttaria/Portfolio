@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./footer.css";
+// import toast from "react-hot-toast";
 
 function Footer({}) {
   const [email, setEmail] = useState("");
@@ -36,9 +37,9 @@ function Footer({}) {
     console.log("Email submitted:", email);
 
     localStorage.setItem("newsletterEmail", email);
-    toast.success(
-      "Registered successfully! We will keep you updated about our products & promotions"
-    );
+    // toast.success(
+    //   "Registered successfully! We will keep you updated about our products & promotions"
+    // );
     setEmail("");
   };
 
