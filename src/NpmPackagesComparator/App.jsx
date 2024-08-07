@@ -148,7 +148,7 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
           <img
             src="https://npmtrends.com/images/logos/npm_trends_logo.png"
-            className="logo"
+            className="npmlogo"
           />
           <a className="navbar-brand" href="#">
             Npm Packages Comparator

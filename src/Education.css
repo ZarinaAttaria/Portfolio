@@ -27,7 +27,7 @@
 .education-item {
   margin-bottom: 30px;
   padding: 20px;
-  background: #bcbdc1;
+  /* background: #bcbdc1; */
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -243,3 +243,48 @@ body {
     max-width: 800px;
   }
 }
+@media (min-width: 1285px) {
+  .content-container {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .content {
+    max-width: calc(100% - 300px);
+    padding: 40px;
+  }
+
+  .intro h1 {
+    font-size: 4.5em;
+  }
+
+  .intro h3 {
+    font-size: 2.5em;
+  }
+
+  .intro p {
+    font-size: 1.5em;
+    max-width: 800px;
+  }
+
+  .intro a {
+    font-size: 2em;
+  }
+
+  .icon1 {
+    height: 100%;
+    width: 100%;
+  }
+
+  .dev_Heading {
+    font-size: 2.5em;
+  }
+
+  .name_Heading {
+    font-size: 4em;
+  }
+}
