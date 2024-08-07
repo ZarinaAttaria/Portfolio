@@ -38,7 +38,7 @@ function Navbar({ cart, handleSearch, handleCart, handleCategoryFilter }) {
 
           <Badge className="badge" count={cart?.length} showZero>
             <img
-              src="shopping-cart.png"
+              src="https://img.icons8.com/?size=100&id=13014&format=png&color=000000"
               className="cartIcon"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasCart"

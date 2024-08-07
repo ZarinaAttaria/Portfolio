@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300%;
+  width: 272%;
   height: 100%;
   margin: 0;
 }
@@ -67,4 +67,33 @@ button {
 input {
   margin-bottom: 10px;
   border: none;
+}
+.iconsLinks {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reset_Btn {
+    width: 50%;
+    margin-top: 10px;
+  }
 }

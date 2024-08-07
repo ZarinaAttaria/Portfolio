@@ -13,6 +13,9 @@ body {
   padding: 20px;
   justify-items: center;
 }
+.Main_Container {
+  width: 92%;
+}
 
 .card {
   background-color: #fff;
@@ -220,6 +223,9 @@ body {
   }
 
   .navbar {
+    width: 100%;
+  }
+  .Main_Container {
     width: 100%;
   }
 }

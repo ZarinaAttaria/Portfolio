@@ -93,9 +93,19 @@ function Cart({ isCartIcon, cart, setCart }) {
                   </div>
                   <div></div>
                   <div className="quantity-controls">
-                    <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                    <button
+                      onClick={() => decreaseQuantity(item.id)}
+                      className="quantityBtn"
+                    >
+                      -
+                    </button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => increaseQuantity(item.id)}>+</button>
+                    <button
+                      onClick={() => increaseQuantity(item.id)}
+                      className="quantityBtn"
+                    >
+                      +
+                    </button>
                   </div>
                   <button
                     className="btn btn-primary removeFromCartBtn"

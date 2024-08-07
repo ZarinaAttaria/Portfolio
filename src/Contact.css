@@ -1,0 +1,42 @@
+.allPage {
+  padding: 20px;
+  background: linear-gradient(135deg, #93a8ee, #b09cca);
+}
+
+.contactus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contactus img {
+  border-radius: 10px;
+}
+
+.contactcard {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+
+.contactus-title {
+  font-size: 2rem;
+  color: #333;
+  background: #bcbdc1;
+}
+
+.contactus .icon {
+  margin-right: 10px;
+  color: #333;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}

@@ -2,44 +2,50 @@ body {
   height: auto;
   width: 100%;
 }
+
 .Packages_List {
   list-style: none;
 }
+
 .searchInput {
   width: 70%;
   margin: 20px;
 }
+
 .search_Btn {
   height: 50%;
   margin: 20px;
 }
+
 .crossIcon {
   justify-self: end;
 }
+
 .Selected_Item {
   display: flex;
   flex-direction: row;
-
   border-style: solid;
   border-width: 3px;
   width: 10%;
 }
+
 .selectedItemsList {
   display: flex;
 }
+
 .vs_heading {
   margin: 15px;
 }
 
 .recommendation-header {
   margin: 30px;
-
   display: flex;
   flex-direction: row;
   width: 100%;
   font-weight: bold;
   font-size: 20px;
 }
+
 .highlight {
   display: flex;
   flex-direction: row;
@@ -48,37 +54,44 @@ body {
   font-size: 20px;
   gap: 0.5%;
 }
+
 .packageName {
 }
+
 .recommendation-heading {
   margin: 30px;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
+
 .recommendation-card {
   margin: 30px;
-
   padding: 10px;
   border-radius: 8px;
   box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .recommended-package {
   color: blue;
 }
+
 .badge {
   background-color: rgb(39, 111, 219);
   height: 30%;
   margin-top: 5px;
 }
+
 .recommended-container {
   display: flex;
   flex-direction: row;
   gap: 2%;
 }
+
 .description {
   color: rgb(87, 83, 83);
 }
+
 .stats {
   display: flex;
   flex-direction: row;
@@ -90,6 +103,7 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+
 .comparison-heading {
   font-size: 30px;
   font-weight: bold;
@@ -99,7 +113,6 @@ body {
 
 .suggestions-container {
   width: 100%;
-
   margin: 0 auto;
   padding: 10px;
   background-color: #f9f9f9;
@@ -116,7 +129,6 @@ body {
   margin: 5px 0;
   border-radius: 4px;
   cursor: pointer;
-
   border: 1px solid #ddd;
 }
 
@@ -134,9 +146,9 @@ body {
   text-align: center;
   color: #999;
 }
+
 .search-input-container {
   width: 100%;
-
   flex-shrink: 0;
   flex-grow: 0;
   margin: 0 auto;
@@ -235,7 +247,9 @@ body {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-
+.tableContainer {
+  width: 100%;
+}
 .table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -252,6 +266,7 @@ body {
 .table a:hover {
   text-decoration: underline;
 }
+
 .navbar-brand {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 500;
@@ -263,31 +278,73 @@ body {
   margin-top: 20px;
   gap: 2%;
 }
+
 .stats-item {
   display: flex;
   flex-direction: column;
 }
+
 .stats {
   display: flex;
-
   flex-direction: row;
   gap: 2%;
   justify-content: flex-end;
 }
+
 .icon {
   height: 2.5%;
   width: 2.5%;
 }
+
 .navbar {
   background-color: #e3f2fd !important;
 }
+
 .logo {
-  height: 5%;
-  width: 5%;
+  height: 4%;
+  width: 4%;
 }
+
 .link-icon {
   margin-left: 10%;
+  height: 40%;
+  width: 40%;
 }
+
 .main_container {
-  width: 400%;
+  width: 182vh;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .main_container {
+    width: 49vh;
+    flex-shrink: 0 !important;
+  }
+
+  .searchInput,
+  .search_Btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .Selected_Item {
+    width: 100%;
+  }
+
+  .downloads-Filter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input-container,
+  .suggestions-container {
+    width: 100%;
+  }
+  .table {
+    width: 50%;
+  }
+  .tableContainer {
+    width: 50%;
+  }
 }

@@ -1,20 +1,57 @@
+import React from "react";
 import "./App.css";
 import Navbar from "./Navbar";
+import { ReactTyped } from "react-typed";
 
 function HomePage() {
   return (
     <>
-      <Navbar />
       <div className="intro">
-        <h2>Hello, Its me Zarina Attaria</h2>
-        <h3> I am a frontend developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          unde voluptatem beatae{" "}
-        </p>
-        <a href="" target="_blank">
-          {/* <FontAwesomeIcon icon={faCoffee} size="2x" /> */}
-        </a>
+        <h2>Hello, It's me </h2>
+        <ReactTyped
+          strings={["Zarina Attaria"]}
+          typeSpeed={100}
+          className="name_Heading"
+        />
+        <div className="dev_Container">
+          <h3 className="i_am_heading">I am a </h3>
+          <ReactTyped
+            strings={["Frontend Developer"]}
+            typeSpeed={100}
+            className="dev_Heading"
+          />
+        </div>
+
+        <div className="iconsLinks">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="linkedin.png" className="icon1" />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="twitter.png" className="icon1" />
+          </a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="facebook.png" className="icon1" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="instagram (1).png" className="icon1" />
+          </a>
+        </div>
       </div>
     </>
   );

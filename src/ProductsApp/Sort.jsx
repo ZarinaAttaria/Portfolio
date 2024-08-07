@@ -5,7 +5,7 @@ function Sort({ setSort, setSortOrder }) {
   return (
     <>
       <img
-        src="sort.png"
+        src="https://img.icons8.com/?size=100&id=21886&format=png&color=000000"
         className="sortIcon"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasSort"
