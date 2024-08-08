@@ -2,6 +2,7 @@ import React from "react";
 import SearchInput from "./SearchInput";
 import Dropdown from "./Dropdown";
 import { Badge } from "antd";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar({ cart, handleSearch, handleCart, handleCategoryFilter }) {
   return (
@@ -27,7 +28,7 @@ function Navbar({ cart, handleSearch, handleCart, handleCategoryFilter }) {
               <a
                 className="nav-link active HomeLink"
                 aria-current="page"
-                href="/"
+                href="/projectsPage/productsApp"
               >
                 Home
               </a>
@@ -40,9 +41,6 @@ function Navbar({ cart, handleSearch, handleCart, handleCategoryFilter }) {
             <img
               src="https://img.icons8.com/?size=100&id=13014&format=png&color=000000"
               className="cartIcon"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasCart"
-              aria-controls="offcanvasCart"
               onClick={handleCart}
               alt="cart"
             />

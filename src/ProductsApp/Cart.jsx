@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Cart({ isCartIcon, cart, setCart }) {
   const handleRemoveCartItem = (pid) => {
     let myCart = [...cart];
-    let index = myCart.findIndex((item) => item._id === pid);
+    let index = myCart.findIndex((item) => item.id === pid);
     myCart.splice(index, 1);
     setCart(myCart);
     localStorage.setItem("cart", JSON.stringify(myCart));
@@ -15,7 +15,6 @@ function Cart({ isCartIcon, cart, setCart }) {
   };
 
   const increaseQuantity = (pid) => {
-    console.log(pid);
     const updatedCart = cart.map((item) => {
       if (item.id === pid) {
         return { ...item, quantity: (item.quantity || 0) + 1 };
@@ -44,40 +43,22 @@ function Cart({ isCartIcon, cart, setCart }) {
     });
     return total.toFixed(2);
   };
+
   const handleClearCart = () => {
     setCart([]);
     localStorage.setItem("cart", JSON.stringify([]));
     toast.success("Cart has been cleared!");
   };
-  return (
-    <div
-      className="offcanvas offcanvas-end"
-      tabIndex="-1"
-      id="offcanvasCart"
-      aria-labelledby="offcanvasCartLabel"
-    >
-      <div className="offcanvas-header">
-        <h4 className="offcanvas-title" id="offcanvasCartLabel">
-          CART
-        </h4>
 
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div>
-        <h5 className="cart-Item-heading">
-          You have {cart?.length} {cart?.length === 1 ? "item" : "items"} in
-          cart!
-        </h5>
-      </div>
+  return (
+    <div className="cart-container">
+      <h5 className="cart-Item-heading">
+        You have {cart?.length} {cart?.length === 1 ? "item" : "items"} in cart!
+      </h5>
       {isCartIcon && (
-        <div className="offcanvas-body">
+        <div className="cart-body">
           {cart.length === 0 ? (
-            " "
+            <p>Your cart is empty</p>
           ) : (
             <>
               {cart.map((item, index) => (
@@ -91,7 +72,6 @@ function Cart({ isCartIcon, cart, setCart }) {
                     <h6>{item.title}</h6>
                     <p className="productPrice">Price: $ {item.price}</p>
                   </div>
-                  <div></div>
                   <div className="quantity-controls">
                     <button
                       onClick={() => decreaseQuantity(item.id)}

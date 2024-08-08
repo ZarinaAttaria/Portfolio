@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  useNavigate,
+} from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar";
 import ProductCard from "./ProductCard";
@@ -137,8 +143,10 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     toast.success("Item added to cart!");
   };
+  const navigate = useNavigate();
 
   const handleCart = () => {
+    navigate("/projectsPage/productsApp/cart");
     console.log("Cart icon clicked");
     setIsCartIcon(true);
   };
@@ -171,20 +179,26 @@ function App() {
                 products={products}
                 handleAddToCart={handleAddToCart}
               />
-              <Cart cart={cart} isCartIcon={isCartIcon} setCart={setCart} />
               <Footer />
             </div>
           }
         />
         <Route
-          path="products/:id"
+          path="/cart"
+          element={
+            <div className="Main_Container">
+              <Cart cart={cart} isCartIcon={isCartIcon} setCart={setCart} />
+            </div>
+          }
+        />
+        <Route
+          path="/products/:id"
           element={
             <div className="Main_Container">
               <ProductDetail
                 products={products}
                 handleAddToCart={handleAddToCart}
               />
-              <Cart cart={cart} isCartIcon={isCartIcon} setCart={setCart} />
             </div>
           }
         />
