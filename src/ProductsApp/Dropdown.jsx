@@ -5,11 +5,13 @@ function Dropdown({ type, handleAction, productsPerPage }) {
   const [category, setCategory] = useState("");
 
   const CategoryFilter = (category) => {
+    console.log("Dropdown selected value:", category);
     handleAction(category);
     setCategory(category);
   };
 
   const ProductsPerPage = (number) => {
+    console.log("Dropdown selected value:", number);
     handleAction(number);
   };
 

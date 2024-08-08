@@ -5,6 +5,7 @@ function SearchInput({ handleSearch }) {
   const [query, setQuery] = useState("");
 
   const handleChange = (e) => {
+    console.log("Search input value:", e.target.value);
     setQuery(e.target.value);
     handleSearch(e.target.value);
   };

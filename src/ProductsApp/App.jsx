@@ -31,6 +31,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    console.log("useEffect dependencies changed");
     if (isSearch && searchQuery.length >= 3) {
       searchProduct(searchQuery);
     } else if (isCategoryFilter) {
@@ -51,25 +52,37 @@ function App() {
   const getData = async (page, sort, sortOrder) => {
     const skip = (page - 1) * productsPerPage;
     const sortType = sort ? `&sortBy=${sort}&order=${sortOrder}` : "";
+    console.log(
+      `Fetching data: page=${page}, sort=${sort}, sortOrder=${sortOrder}`
+    );
 
     await fetch(
       `https://dummyjson.com/products?limit=${productsPerPage}&skip=${skip}${sortType}`
     )
       .then((response) => response.json())
       .then((data) => {
+        console.log("Data fetched: ", data);
         setProducts(data.products);
         setTotalProducts(data.total);
+      })
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
       });
   };
 
   const searchProduct = async (query) => {
     const sortType = sort ? `&sortBy=${sort}&order=${sortOrder}` : "";
+    console.log(
+      `Searching products: query=${query}, sort=${sort}, sortOrder=${sortOrder}`
+    );
+
     const response = await fetch(
       `https://dummyjson.com/products/search?q=${query}&limit=${productsPerPage}&skip=${
         (page - 1) * productsPerPage
       }${sortType}`
     );
     const data = await response.json();
+    console.log("Search data fetched: ", data);
     setProducts(data.products);
     setTotalProducts(data.total);
   };
@@ -77,18 +90,23 @@ function App() {
   const categoryFilter = async (category) => {
     const skip = (page - 1) * productsPerPage;
     const sortType = sort ? `&sortBy=${sort}&order=${sortOrder}` : "";
+    console.log(
+      `Filtering by category: category=${category}, sort=${sort}, sortOrder=${sortOrder}`
+    );
+
     const response = await fetch(
       `https://dummyjson.com/products/category/${category}?limit=${productsPerPage}&skip=${skip}${sortType}`
     );
     const data = await response.json();
+    console.log("Category filter data fetched: ", data);
     setProducts(data.products);
     setTotalProducts(data.total);
   };
 
   const handleCategoryFilter = (category) => {
+    console.log("Category filter applied:", category);
     setIsCategoryFilter(true);
     setIsSearch(false);
-    categoryFilter(category);
     setFilterCategory(category);
     setPage(1);
   };
@@ -96,6 +114,7 @@ function App() {
   const debouncedSearch = _.debounce(() => searchProduct(searchQuery), 500);
 
   const handleSearch = (query) => {
+    console.log("Search query:", query);
     setIsSearch(true);
     setIsCategoryFilter(false);
     setSearchQuery(query);
@@ -104,6 +123,7 @@ function App() {
   };
 
   const handleAddToCart = (product) => {
+    console.log("Product added to cart:", product);
     const productIndex = cart.findIndex((p) => p.id === product.id);
     if (productIndex > -1) {
       cart[productIndex].quantity += 1;
@@ -119,6 +139,7 @@ function App() {
   };
 
   const handleCart = () => {
+    console.log("Cart icon clicked");
     setIsCartIcon(true);
   };
 

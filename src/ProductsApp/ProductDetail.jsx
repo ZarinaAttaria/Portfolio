@@ -7,9 +7,15 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function ProductDetail({ products, handleAddToCart }) {
   const { id } = useParams();
-  const selectedProduct = products.find(
-    (product) => product.id === parseInt(id)
-  );
+  console.log("Product ID from URL:", id);
+  const productId = parseInt(id, 10);
+  console.log("Product ID as integer:", productId);
+
+  console.log("Received products:", products);
+
+  const selectedProduct = products.find((product) => product.id === productId);
+
+  console.log("Selected product:", selectedProduct);
 
   const renderStars = (rating) => {
     const stars = [];
