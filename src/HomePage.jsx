@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <>
       <div className="intro">
-        <h2>Hello, It's me </h2>
+        <h2 className="hello_heading">Hello, It's me </h2>
         <ReactTyped
           strings={["Zarina Attaria"]}
           typeSpeed={100}
