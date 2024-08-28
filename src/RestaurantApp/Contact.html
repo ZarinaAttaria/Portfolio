@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant App</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="top-Container">
+      <div class="navbar">
+        <ul>
+          <li class="name">
+            <div>
+              <img class="fork-img" src="image-removebg-preview.png" alt="" />
+              <a href="#home" class="restoran">Restoran</a>
+            </div>
+          </li>
+          <li class="menu-item-nav home-item"><a href="home.html">HOME</a></li>
+          <li class="menu-item-nav contact">
+            <a href="Contact.html">CONTACT</a>
+          </li>
+          <li class="menu-item-nav">
+            <button class="bookTableBtn1">
+              <a href="#book">Book a Table</a>
+            </button>
+          </li>
+          <li class="menu-icon"><span>&#9776;</span></li>
+        </ul>
+      </div>
+
+      <div class="center-container">
+        <div>
+          <h1 class="contact-us-heading">Contact Us</h1>
+          <div class="contact-ul-div">
+            <ul class="contactus-Ul">
+              <li class="home-link"><a href="home.html">HOME</a></li>
+              /
+              <li class="contact-link">
+                <a class="contact-link" href="Contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contactUs-container">
+      <div class="contactUs-center-container">
+        <h2 class="h2-contact">Contact Us</h2>
+        <h2 class="h1-contact">Contact For Any Query</h2>
+        <div class="contactUs-center-container-top">
+          <div class="contact1">
+            <h2 class="bookingHeading">Booking</h2>
+            <div class="email-container">
+              <img src="email.png" class="emailImage" />
+              <p class="email">booking@example.com</p>
+            </div>
+          </div>
+          <div class="contact1">
+            <h2 class="bookingHeading">General</h2>
+            <div class="email-container">
+              <img src="email.png" class="emailImage" />
+              <p class="email">general@example.com</p>
+            </div>
+          </div>
+          <div class="contact1">
+            <h2 class="bookingHeading">Technical</h2>
+            <div class="email-container">
+              <img src="email.png" class="emailImage" />
+              <p class="email">technical@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="submit-form-container">
+          <img src="map.png" class="mapImage" />
+          <form class="contact-form">
+            <div class="form-input1">
+              <input type="text" class="input" placeholder="Your Name" />
+
+              <input
+                type="email"
+                class="input emailInput"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-input1">
+              <input type="text" class="input" placeholder="Subject" />
+            </div>
+            <div class="formInput2">
+              <input class="Special-input" type="text" placeholder="Message" />
+            </div>
+            <input type="submit" class="bookNowBtn" value="SEND MESSAGE" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div>
+        <ul class="footer-container-center">
+          <li>© Your Site Name,All Right Reserved.</li>
+          <div class="home-contact">
+            <li>Home</li>
+            <li>Contact</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const navbar = document.querySelector(".navbar");
+      document
+        .querySelector(".menu-icon")
+        .addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      document
+        .querySelector(".homelink")
+        .addEventListener("click", function () {
+          window.location.href = "home.html";
+        });
+    </script>
+  </body>
+</html>

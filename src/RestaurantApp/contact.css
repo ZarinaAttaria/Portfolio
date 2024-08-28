@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.center-container {
+  z-index: 3;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 10%;
+}
+.foodImage {
+  width: 300px;
+  height: 300px;
+  margin-top: 5%;
+}
+.navbar ul {
+  display: flex;
+
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  list-style: none;
+}
+.restoran {
+  color: #fea116;
+}
+.navbar .name {
+  font-size: 32px;
+  font-weight: bolder;
+
+  margin-right: auto;
+}
+.menu-icon {
+  display: block;
+  color: #fea116;
+}
+.menu-item-nav {
+  display: none;
+}
+.navbar.active .menu-item-nav {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-right: 0;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.navbar.active .home-item {
+  margin-top: 30px;
+}
+.navbar.active ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.navbar.active .menu-icon {
+  align-self: flex-end;
+  position: relative;
+  top: -198px;
+}
+/* before */
+.navbar1 {
+  display: none;
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 4;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-left: 100px;
+  left: 0;
+
+  right: 0;
+
+  flex-direction: column;
+  align-items: center;
+}
+.contact-us-heading {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.restoran-logo {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  flex-shrink: 0;
+}
+
+.top-Container {
+  position: relative;
+  height: 500px;
+
+  background-color: #0f172b;
+  overflow: hidden;
+}
+
+.top-Container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.top-Container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 43, 0.8);
+  z-index: 2;
+}
+.navbar {
+  position: relative;
+  z-index: 3;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  margin-left: 50px;
+}
+.p1 {
+  margin: 0;
+  padding: 0;
+}
+.bookTableBtn1 {
+  color: white;
+  background-color: #fea116;
+  border: none;
+  height: 50px;
+  width: 150px;
+  margin-top: 8%;
+}
+.bookTableBtn {
+  color: white;
+  background-color: #fea116;
+  border: none;
+  height: 25px;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+}
+.homelink,
+.contactlink {
+  margin-top: 15px;
+}
+.home-link {
+}
+.contact-link {
+  color: #fea116;
+}
+.contactus-Ul {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin: 0;
+  padding: 0;
+  margin-top: 6%;
+}
+.contactUs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.h1-contact {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+
+  text-align: center;
+}
+.h2-contact {
+  color: #fea116;
+  font-family: "Dancing Script", cursive;
+
+  text-align: center;
+}
+.contactUs-center-container-top {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.emailImage {
+  margin-top: 2%;
+  width: 8%;
+  height: 8%;
+}
+.email-container {
+  display: flex;
+}
+.email {
+  color: rgb(141, 139, 139);
+  margin-left: 1%;
+}
+.bookingHeading {
+  margin: 0;
+  margin-left: 5%;
+  color: #fea116;
+  font-family: "Dancing Script", cursive;
+}
+.contact1 {
+  margin-top: 8%;
+}
+.mapImage {
+  width: 100%;
+}
+.contact-form {
+  width: 100%;
+}
+.form-input1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-left: 5%;
+  margin-top: 0%;
+}
+.input {
+  width: 40vh;
+
+  height: 7vh;
+}
+.emailInput {
+  margin-top: 5%;
+}
+.input1 {
+  width: 42vh;
+  height: 8vh;
+}
+.formInput2 {
+  padding: 10px;
+  margin-left: 5%;
+}
+.Special-input {
+  width: 40vh;
+  height: 13vh;
+}
+.bookNowBtn {
+  color: white;
+  background-color: #fea116;
+  border: none;
+  height: 50px;
+  width: 40vh;
+  margin-top: 8%;
+  margin-left: 7%;
+}
+.footer-container {
+  background-color: #272f41;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  margin-top: 50px;
+}
+.footer-container-center {
+  margin-top: 3%;
+  width: 150vh;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home-contact {
+  display: flex;
+  /* justify-content: center; */
+  margin-left: 5%;
+  gap: 1%;
+}
+.contactUs-container1 {
+  display: flex;
+  flex-direction: row;
+}
+.h1-contact {
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .navbar {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+    top: 30px;
+    margin: auto;
+  }
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .navbar .name {
+    margin-right: auto;
+    font-size: 32px;
+    font-weight: bolder;
+  }
+
+  .navbar ul li {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: large;
+    color: orange;
+  }
+  .navbar .contact {
+    color: white;
+  }
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .menu-item-nav {
+    display: inline;
+  }
+  .home-item a {
+    text-decoration: none;
+    color: white;
+  }
+  .contact a {
+    color: white;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .btn a {
+    color: white;
+  }
+
+  a:hover {
+    color: #feab2e;
+  }
+
+  /* befire? */
+
+  body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  .contact-link {
+    color: #fea116;
+  }
+
+  .top-Container {
+    position: relative;
+
+    height: 400px;
+    background-color: #0f172b;
+    overflow: hidden;
+  }
+
+  .top-Container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 1;
+  }
+
+  .top-Container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 43, 0.8);
+    z-index: 2;
+  }
+  .navbar {
+    z-index: 3;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .center-container {
+    z-index: 3;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    margin-top: 10%;
+  }
+  .foodImage {
+    width: 30%;
+    height: 30%;
+  }
+
+  .contact-us-heading {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .p1 {
+    margin: 0;
+    padding: 0;
+  }
+  .bookTableBtn1 {
+    color: white;
+    background-color: #fea116;
+    border: none;
+    height: 50px;
+    width: 150px;
+    margin-top: 8%;
+  }
+  .bookTableBtn {
+    color: white;
+    background-color: #fea116;
+    border: none;
+    height: 25px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 8%;
+  }
+  .homelink,
+  .contactlink {
+    margin-top: 12%;
+  }
+  .mobile-menu {
+    display: none;
+    background-color: #0f172b;
+    margin-top: 60px;
+    right: 10%;
+  }
+
+  .mobile-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .contactUs-center-container-top {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    margin-bottom: 5%;
+  }
+  .submit-form-container {
+    display: flex;
+  }
+  .form-input1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 5%;
+    margin-top: 0%;
+  }
+  .input {
+    width: 80vh;
+
+    height: 7vh;
+  }
+  .emailInput {
+    margin-top: 5%;
+  }
+  .input1 {
+    width: 42vh;
+    height: 8vh;
+  }
+  .formInput2 {
+    padding: 10px;
+    margin-left: 5%;
+  }
+  .Special-input {
+    width: 80vh;
+
+    height: 22vh;
+  }
+  .bookNowBtn {
+    color: white;
+    background-color: #fea116;
+    border: none;
+    height: 50px;
+    width: 82vh;
+
+    margin-top: 3%;
+    margin-left: 7%;
+  }
+  .footer-container {
+    height: 70px;
+    background-color: #272f41;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+  }
+  .footer-container-center {
+    list-style: none;
+
+    margin-top: 3%;
+    width: 150vh;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+  .home-contact {
+    display: flex;
+
+    gap: 10%;
+  }
+}

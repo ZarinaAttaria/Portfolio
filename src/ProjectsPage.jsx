@@ -9,12 +9,15 @@ import "./App.css";
 import CounterApp from "./CounterApp/App";
 import PackagesComparator from "./NpmPackagesComparator/App";
 import ProductsApp from "./ProductsApp/App";
+// import Restaurant from "./RestaurantApp";
+import BudgetTrackerApp from "./BudgetTrackerApp/App";
 import Navbar from "./Navbar";
 
 const SIDE_MENU = [
   { to: "counterApp", label: "Counter App" },
   { to: "npmPackagesComparator", label: "NPM Comparator" },
   { to: "productsApp", label: "Product App" },
+  { to: "budgetTracker", label: "Budget Tracker App" },
 ];
 
 function ProjectsPage() {
@@ -67,6 +70,8 @@ function ProjectsPage() {
               element={<PackagesComparator />}
             />
             <Route path="productsApp/*" element={<ProductsApp />} />
+            {/* <Route path="restrauntApp" element={<Restaurant />} /> */}
+            <Route path="budgetTracker/*" element={<BudgetTrackerApp />} />
           </Routes>
         </div>
       </div>

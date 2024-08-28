@@ -7,9 +7,9 @@ body {
   font-family: "Viga", sans-serif;
   font-style: normal;
 }
-.navbar {
-  background: linear-gradient(135deg, #93a8ee, #b09cca) !important;
-}
+/* .navbar {
+    background;
+} */
 
 .navbar-container {
   display: flex;
