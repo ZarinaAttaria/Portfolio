@@ -52,7 +52,7 @@
 }
 .filterRecordButton {
   height: 50px;
-  width: 100px;
+  width: 110px;
   background-color: rgb(231, 184, 15);
   margin-top: 15px;
   border: none;
@@ -199,7 +199,7 @@
 }
 .resetFilterBtn {
   height: 50px;
-  width: 100px;
+  width: 110px;
   background-color: red;
   border: none;
   color: white;
@@ -233,8 +233,7 @@
     width: 100px;
   }
   .dateInput {
-    height: 28px;
-
+    height: 100%;
     width: 100%;
   }
   .icons {

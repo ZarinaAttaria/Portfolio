@@ -30,27 +30,26 @@ function Navbar() {
         <a href="/" className="budgetTrackerLink">
           Budget Tracker
         </a>
-      </div>
+        <div className="user-menu">
+          <button className="user-logo" onClick={toggleDropdown}>
+            <img src="/user.png" alt="User Logo" className="logo" />
+          </button>
+          {isOpen && (
+            <div className="dropdown-menu">
+              {email && <p className="email">{email}</p>}
 
-      <div className="user-menu">
-        <button className="user-logo" onClick={toggleDropdown}>
-          <img src="/user.png" alt="User Logo" className="logo" />
-        </button>
-        {isOpen && (
-          <div className="dropdown-menu">
-            {email && <p className="email">{email}</p>}
-
-            {token ? (
-              <a href="#" onClick={handleLogout}>
-                Logout
-              </a>
-            ) : (
-              <a href="#" className="signup" onClick={handleSignUp}>
-                Sign Up
-              </a>
-            )}
-          </div>
-        )}
+              {token ? (
+                <a href="#" onClick={handleLogout}>
+                  Logout
+                </a>
+              ) : (
+                <a href="#" className="signup" onClick={handleSignUp}>
+                  Sign Up
+                </a>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

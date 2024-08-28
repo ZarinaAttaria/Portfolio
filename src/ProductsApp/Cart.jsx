@@ -64,7 +64,7 @@ function Cart({ isCartIcon, cart, setCart }) {
               {cart.map((item, index) => (
                 <div key={index} className="cart-item">
                   <img
-                    src={item.images[0]}
+                    src={item.images}
                     alt={item.title}
                     className="cart-item-image"
                   />

@@ -8,12 +8,15 @@ import Navbar from "./Navbar";
 function App() {
   return (
     <>
+      <div className="budgetTrackerMain">
+
       <Navbar />
       <Routes>
         <Route path="/" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/budgetPage" element={<BudgetPage />} />
       </Routes>
+      </div>
     </>
   );
 }
