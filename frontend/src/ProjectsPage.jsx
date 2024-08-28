@@ -18,6 +18,11 @@ const SIDE_MENU = [
   { to: "npmPackagesComparator", label: "NPM Comparator" },
   { to: "productsApp", label: "Product App" },
   { to: "budgetTracker", label: "Budget Tracker App" },
+  {
+    to: "/RestaurantApp/home.html",
+    label: "Restaurant App",
+    isExternal: true,
+  },
 ];
 
 function ProjectsPage() {
@@ -35,23 +40,23 @@ function ProjectsPage() {
       <div className="content-container">
         <div className="sidebar">
           <hr />
-          {SIDE_MENU.map((item) => (
-            <Link to={item.to} className={getClass(item.to)} key={item.to}>
-              {item.label}
-            </Link>
-          ))}
-          {/* <div
-            className={getClass(SIDE_MENU[0].to)}
-            onClick={() => navigate(SIDE_MENU[0].to)}
-          >
-            {SIDE_MENU[0].label}
-          </div>
-          <div
-            className={getClass(SIDE_MENU[1].to)}
-            onClick={() => navigate(SIDE_MENU[1].to)}
-          >
-            {SIDE_MENU[1].label}
-          </div> */}
+          {SIDE_MENU.map((item) =>
+            item.isExternal ? (
+              <a
+                href={item.to}
+                className={getClass(item.to)}
+                key={item.to}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link to={item.to} className={getClass(item.to)} key={item.to}>
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
 
         <div className="content">
@@ -70,7 +75,6 @@ function ProjectsPage() {
               element={<PackagesComparator />}
             />
             <Route path="productsApp/*" element={<ProductsApp />} />
-            {/* <Route path="restrauntApp" element={<Restaurant />} /> */}
             <Route path="budgetTracker/*" element={<BudgetTrackerApp />} />
           </Routes>
         </div>
