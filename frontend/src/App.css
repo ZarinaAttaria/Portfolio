@@ -1,7 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Viga&display=swap");
 body {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   margin: 0;
   font-family: "Viga", sans-serif;
@@ -77,13 +77,12 @@ body {
   margin-left: auto;
 }
 
-.navbar-toggler-icon {
+/* .navbar-toggler-icon {
   color: white;
 
   background-color: white;
 } */
-
-.sideBarProjectsHeading {
+*/ .sideBarProjectsHeading {
   margin-top: 10%;
   margin-left: 5%;
 }
@@ -322,6 +321,7 @@ body {
   .sidebar {
     width: 100%;
     height: auto;
+    font-size: 10px;
     flex-direction: row;
     overflow-x: auto;
   }
