@@ -20,13 +20,13 @@ To run this portfolio locally, follow these steps:
    git clone https://github.com/ZarinaAttaria/Portfolio.git
    ```
 
-## Frontend Setup
+   **Frontend setup**
 
 cd frontend
 npm install
 npm run dev
 
-## Backend Setup
+**Backend setup**
 
 cd backend
 npm install
