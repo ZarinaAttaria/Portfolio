@@ -184,7 +184,7 @@ function App() {
           }
         />
         <Route
-          path="/cart"
+          path="cart"
           element={
             <div className="Main_Container">
               <Cart cart={cart} isCartIcon={isCartIcon} setCart={setCart} />
