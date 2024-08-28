@@ -23,12 +23,14 @@ body {
   /* color: white; */
   font-size: 1.5em;
   /* text-decoration: none; */
-  font-family: "Dancing Script", cursive !important;
+
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
-
+.navbar-portfolio {
+  font-family: "Dancing Script", cursive !important;
+}
 .navbar-links {
   display: flex;
 }
@@ -165,6 +167,7 @@ body {
 }
 .introContainer {
   display: flex;
+  background-color: #bfcbf3;
 }
 .intro {
   display: flex;
