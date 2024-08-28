@@ -27,7 +27,7 @@ function Navbar() {
     <div className="navbar budgetTrackerNavbar">
       <div className="navbarStart">
         <img src="/logo.png" className="logo" alt="Logo" />
-        <a href="/" className="budgetTrackerLink">
+        <a href="/projectsPage/budgetTracker" className="budgetTrackerLink">
           Budget Tracker
         </a>
         <div className="user-menu">
@@ -43,7 +43,11 @@ function Navbar() {
                   Logout
                 </a>
               ) : (
-                <a href="#" className="signup" onClick={handleSignUp}>
+                <a
+                  href="/projectsPage/budgetTracker"
+                  className="signup"
+                  onClick={handleSignUp}
+                >
                   Sign Up
                 </a>
               )}

@@ -66,7 +66,7 @@ function Dropdown({ type, handleAction, productsPerPage }) {
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="/">
+              <a className="dropdown-item" href="/projectsPage/productsApp">
                 All
               </a>
             </li>
