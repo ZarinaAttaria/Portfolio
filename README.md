@@ -1,6 +1,7 @@
 # Zarina Attaria's Portfolio
 
 ![License](https://img.shields.io/github/license/ZarinaAttaria/Portfolio)
+![Version](https://img.shields.io/github/package-json/v/ZarinaAttaria/portfolio)
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and the projects I've developed. It’s a responsive web application built with React, featuring a clean design and easy navigation.
 
