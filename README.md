@@ -35,11 +35,11 @@ To run this portfolio locally, follow these steps:
    ```
 
 2. Execute the frontend:
-   cd frontend
-   npm install
+   cd frontend,
+   npm install,
    npm run dev
 
 3. Execute the backend:
-   cd backend
-   npm install
+   cd backend,
+   npm install,
    npm start
