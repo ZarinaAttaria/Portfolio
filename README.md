@@ -1,5 +1,7 @@
 # Zarina Attaria's Portfolio
 
+![NPM Version](https://img.shields.io/npm/v/react)
+
 Welcome to my personal portfolio website! This project showcases my work, skills, and the projects I've developed. It’s a responsive web application built with React, featuring a clean design and easy navigation.
 
 ## Features
