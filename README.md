@@ -20,26 +20,26 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 
 - **Interactive Projects Page**: Browse through various projects like the Counter App, NPM Packages Comparator, Product App, Restaurant App, and more.
 - **Responsive Design**: Works seamlessly across desktops, tablets, and mobile devices.
-- **Tech Stack**: Built using React, Vite, Node.js, Express, and modern CSS for styling.
+- **Tech Stack**: Built using React, Vite, Node.js, Express, and modern CSS, Bootstrap for styling.
 - **Navigation**: Sidebar navigation to switch between projects.
-- **Custom Components**: Implemented reusable components such as a Navbar, Sidebar, and dynamic content sections.
+- **Custom Components**: Implemented reusable components such as a Navbar, Sidebar for projects navigation, and dynamic content sections like Projects Page, Contact, Skills, About, Education.
 
 ## Installation
 
 To run this portfolio locally, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
 
    ```bash
    git clone https://github.com/ZarinaAttaria/Portfolio.git
    ```
 
-2. Execute the frontend:
+2. **Execute the frontend**:
    cd frontend,
    npm install,
    npm run dev
 
-3. Execute the backend:
+3. **Execute the backend**:
    cd backend,
    npm install,
    npm start
