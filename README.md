@@ -24,6 +24,11 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 - **Navigation**: Sidebar navigation to switch between projects.
 - **Custom Components**: Implemented reusable components such as a Navbar, Sidebar for projects navigation, and dynamic content sections like Projects Page, Contact, Skills, About, Education.
 
+## Tech Stack
+
+- **Frontend**: React, Vite, CSS, Bootstrap, React Router DOM
+- **Backend**: Node.js, Express
+
 ## Installation
 
 To run this portfolio locally, follow these steps:
