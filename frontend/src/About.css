@@ -3,22 +3,39 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #bfcbf3;
+  background-color: #e1e5f4;
 
   padding: 20px;
 }
-
+.about-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.about-image {
+  height: 60px;
+  width: 60px;
+}
 .about-container {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background: #fff;
 }
-
+.about-description-container {
+  max-width: 600px;
+}
+.myPicture {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10%;
+}
 .about-image img {
   width: 100%;
   height: auto;
@@ -26,16 +43,18 @@
 }
 
 .about-content {
+  display: flex;
   padding: 20px;
   flex: 1;
+  gap: 5%;
 }
 
 .about-title {
   font-size: 2rem;
   color: #333;
-  margin-bottom: 15px;
   text-align: center;
-  /* background: #bcbdc1; */
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 .about-description {
@@ -43,4 +62,21 @@
   line-height: 1.6;
   color: #555;
   text-align: justify;
+}
+.me {
+  margin-left: 10px;
+  color: purple;
+}
+
+.icon2 {
+  color: rgb(15, 65, 216);
+}
+.download-cv-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }

@@ -17,7 +17,7 @@ function HomePage() {
           <div className="dev_Container">
             <h3 className="i_am_heading">I am a </h3>
             <ReactTyped
-              strings={["Frontend Developer"]}
+              strings={["Web Developer"]}
               typeSpeed={100}
               className="dev_Heading"
             />
@@ -55,7 +55,7 @@ function HomePage() {
           </div>
         </div>
         <div className="myPhotoContainer">
-          <img src="myPhoto.jpeg" className="myPhoto" />
+          <img src="myPhoto.png" className="myPhoto" />
         </div>
       </div>
     </>

@@ -6,11 +6,9 @@ import {
   useNavigate,
 } from "react-router-dom";
 import "./App.css";
-import CounterApp from "./CounterApp/App";
-import PackagesComparator from "./NpmPackagesComparator/App";
-import ProductsApp from "./ProductsApp/App";
+
 // import Restaurant from "./RestaurantApp";
-import BudgetTrackerApp from "./BudgetTrackerApp/App";
+
 import Navbar from "./Navbar";
 
 const SIDE_MENU = [
@@ -69,13 +67,36 @@ function ProjectsPage() {
                 </div>
               }
             />
-            <Route path="counterApp" element={<CounterApp />} />
+            <Route
+              path="counterApp"
+              element={
+                <iframe
+                  src="https://counter-app-opal-one.vercel.app"
+                  title="W3Schools Free Online Web Tutorials"
+                  style={{ width: "100%", height: "100vh", border: "none" }}
+                ></iframe>
+              }
+            />
             <Route
               path="npmPackagesComparator"
-              element={<PackagesComparator />}
+              element={
+                <iframe
+                  src=" https://packages-comparator.vercel.app"
+                  title="W3Schools Free Online Web Tutorials"
+                  style={{ width: "100%", height: "100vh", border: "none" }}
+                ></iframe>
+              }
             />
-            <Route path="productsApp/*" element={<ProductsApp />} />
-            <Route path="budgetTracker/*" element={<BudgetTrackerApp />} />
+            {/* <Route path="productsApp/*" element={<ProductsApp />} /> */}
+            <Route
+              path="budgetTracker/*"
+              element={
+                <iframe
+                  src="https://budget-tracker-app-8au2.vercel.app"
+                  style={{ width: "100%", height: "100vh", border: "none" }}
+                ></iframe>
+              }
+            />
           </Routes>
         </div>
       </div>

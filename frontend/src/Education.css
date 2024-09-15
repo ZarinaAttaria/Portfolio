@@ -3,58 +3,85 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #bfcbf3;
-
+  background-color: #e1e5f4;
   padding: 20px;
 }
-
+.education-item {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  gap: 3%;
+}
+.education-para {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 100;
+  color: #333;
+}
 .education-container {
-  max-width: 800px;
-  width: 100%;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+
   padding: 40px 20px;
 }
-
+.institution-image {
+  width: 250px;
+  height: 200px;
+}
 .education-title {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
+  font-weight: 700;
+  margin: 0;
+
   text-align: center;
   font-family: "Arial", sans-serif;
 }
-
+.title1 {
+  color: purple;
+}
+.edu-logo {
+  height: 6%;
+  width: 6%;
+}
+.myedu-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
 .education-item {
   margin-bottom: 30px;
-  padding: 20px;
+
   /* background: #bcbdc1; */
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .education-institution {
+  color: #10406c;
+
   font-size: 1.8rem;
-  color: #333;
+  margin-top: 40px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .education-degree {
   font-size: 1.3rem;
-  color: #555;
+  color: #333;
+
   margin-bottom: 5px;
 }
 
 .education-period {
   font-size: 1.1rem;
-  color: #777;
+  color: green;
   margin-bottom: 15px;
 }
 
 .education-description {
   font-size: 1rem;
-  color: #555;
+
   line-height: 1.6;
   text-align: justify;
 }
