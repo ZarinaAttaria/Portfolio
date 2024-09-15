@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .contactus img {
@@ -15,6 +14,9 @@
 }
 
 .contactcard {
+  margin-top: 20px;
+  max-width: 950px;
+  display: flex;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,9 +25,11 @@
 }
 
 .contactus-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #333;
-  /* background: #bcbdc1; */
+  text-align: center;
+  font-weight: 700;
+  margin-top: 7px;
 }
 
 .contactus .icon {
@@ -39,4 +43,64 @@
 
 .mt-3 {
   margin-top: 1rem;
+}
+.contact-image {
+  width: 400px;
+  height: 400px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+input {
+  width: 450px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #e1e5f4;
+  border: none;
+  padding-left: 40px;
+}
+.messageInput {
+  height: 100px;
+}
+.submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.submit-icon {
+  position: absolute;
+}
+.submitBtn {
+  width: 40%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-icon {
+  position: absolute;
+  left: 10px;
+  margin: 0;
+  margin-top: 7px;
+  font-size: 1.5rem;
+  color: black;
+}
+.contact-heading {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.touch {
+  margin-left: 10px;
+  color: purple;
 }
