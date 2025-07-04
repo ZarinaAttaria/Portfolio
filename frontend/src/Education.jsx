@@ -7,7 +7,7 @@ const education = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIFrNfujawgU7HSQXl1xt4jAsFigl9K12GGg&s",
     institution: "Bahria University",
     degree: "Bachelor of Science in Software Engineering",
-    period: "2021 - 2025 | Pursuing",
+    period: "2021 - 2025 | Completed",
   },
   {
     picture:

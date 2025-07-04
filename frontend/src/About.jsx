@@ -37,7 +37,7 @@ const About = () => {
                 <BiPhoneCall className="icon2" /> : 0313-5341176
               </p>
               <a
-                href="/CV (Zarina Attaria).pdf"
+                href="/Zarina Attaria Resume.pdf"
                 download
                 className="download-cv-button"
               >

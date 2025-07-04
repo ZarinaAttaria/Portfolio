@@ -7,10 +7,6 @@ import {
 } from "react-router-dom";
 import "./App.css";
 
-// import Restaurant from "./RestaurantApp";
-
-import Navbar from "./Navbar";
-
 const SIDE_MENU = [
   { to: "counterApp", label: "Counter App" },
   { to: "npmPackagesComparator", label: "NPM Comparator" },
@@ -21,6 +17,7 @@ const SIDE_MENU = [
     label: "Restaurant App",
     isExternal: true,
   },
+  { to: "smartPrepAi", label: "SmartPrep AI" },
 ];
 
 function ProjectsPage() {
@@ -34,73 +31,56 @@ function ProjectsPage() {
   };
 
   return (
-    <>
-      <div className="content-container">
-        <div className="sidebar">
-          <hr />
-          {SIDE_MENU.map((item) =>
-            item.isExternal ? (
-              <a
-                href={item.to}
-                className={getClass(item.to)}
-                key={item.to}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link to={item.to} className={getClass(item.to)} key={item.to}>
-                {item.label}
-              </Link>
-            )
-          )}
-        </div>
-
-        <div className="content">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="default-message ">
-                  Please select a project from the sidebar.
-                </div>
-              }
-            />
-            <Route
-              path="counterApp"
-              element={
-                <iframe
-                  src="https://counter-app-opal-one.vercel.app"
-                  title="W3Schools Free Online Web Tutorials"
-                  style={{ width: "100%", height: "100vh", border: "none" }}
-                ></iframe>
-              }
-            />
-            <Route
-              path="npmPackagesComparator"
-              element={
-                <iframe
-                  src=" https://packages-comparator.vercel.app"
-                  title="W3Schools Free Online Web Tutorials"
-                  style={{ width: "100%", height: "100vh", border: "none" }}
-                ></iframe>
-              }
-            />
-            {/* <Route path="productsApp/*" element={<ProductsApp />} /> */}
-            <Route
-              path="budgetTracker/*"
-              element={
-                <iframe
-                  src="https://budget-tracker-app-8au2.vercel.app"
-                  style={{ width: "100%", height: "100vh", border: "none" }}
-                ></iframe>
-              }
-            />
-          </Routes>
-        </div>
+    <div className="projects-container">
+      <div className="sidebar">
+        <hr />
+        {SIDE_MENU.map((item) =>
+          item.isExternal ? (
+            <a
+              href={item.to}
+              className={getClass(item.to)}
+              key={item.to}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link to={item.to} className={getClass(item.to)} key={item.to}>
+              {item.label}
+            </Link>
+          )
+        )}
       </div>
-    </>
+
+      <div className="main-content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="default-message">
+                Please select a project from the sidebar.
+              </div>
+            }
+          />
+          {/* Other routes... */}
+          <Route
+            path="smartPrepAi"
+            element={
+              <div className="video-wrapper">
+                <div className="video-container">
+                  <video
+                    controls
+                    className="responsive-video"
+                    src="/videos/smartPrepAI.mp4"
+                  />
+                </div>
+              </div>
+            }
+          />
+        </Routes>
+      </div>
+    </div>
   );
 }
 
