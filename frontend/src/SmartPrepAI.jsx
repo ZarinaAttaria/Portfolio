@@ -3,9 +3,9 @@ import "./App.css";
 const SmartPrepAI = () => {
   return (
     <div className="video-wrapper">
-      <button onClick={() => navigate(-1)} className="back-button">
+      {/* <button onClick={() => navigate("/home")} className="back-button">
         ← Back to Projects
-      </button>
+      </button> */}
       <div className="video-container">
         <video
           controls

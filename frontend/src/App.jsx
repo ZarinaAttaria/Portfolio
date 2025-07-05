@@ -15,8 +15,18 @@ function App() {
     <>
       <Navbar />
 
-      <HomePage />
-      <Footer />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <HomePage />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/smartPrepAi" element={<SmartPrepAI />} />
+      </Routes>
     </>
   );
 }
