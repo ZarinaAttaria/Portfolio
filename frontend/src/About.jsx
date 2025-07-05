@@ -16,7 +16,7 @@ const About = () => {
         </div>
         <div className="about-container">
           <div className="about-content">
-            <img src="myPhoto.jfif" className="myPicture" />
+            <img src="me.png" className="myPicture" />
             <div className="about-description-container">
               <h4>I am Zarina!</h4>
               <h6>Full Stack Developer</h6>

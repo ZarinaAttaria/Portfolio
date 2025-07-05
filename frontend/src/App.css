@@ -122,7 +122,7 @@ body {
 .intro {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
+  margin-left: 5%;
   width: 70%;
   color: #10406c;
   height: 90vh;
@@ -249,7 +249,6 @@ body {
 /* Layout Adjustments */
 .projects-container {
   display: flex;
-  min-height: 100vh;
 }
 
 .sidebar {
@@ -264,7 +263,168 @@ body {
   padding: 20px;
   overflow-y: auto;
 }
+/* Projects Grid Styles */
+.projects-container {
+  padding: 2rem;
 
+  background: #305170;
+
+  min-height: 100vh;
+}
+.projects-grid {
+}
+.projects-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.project-card h3 {
+  margin: 1rem 1rem 0.5rem;
+  color: #2c3e50;
+}
+
+.project-card p {
+  margin: 0 1rem 1rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.video-indicator {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #3498db;
+}
+
+/* Video Page Styles */
+.video-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.view-project-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.project-card:hover .view-project-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.view-project-btn:hover {
+  background-color: #2980b9;
+}
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+/* In your CSS file */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for active navigation link */
+.nav-link.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+@media (max-width: 900px) {
+  .project-card {
+    flex: 0 0 calc(50% - 1.5rem); /* 2 items per row on medium screens */
+    max-width: calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 0 0 100%; /* 1 item per row on small screens */
+    max-width: 100%;
+  }
+}
 /* Responsive Behavior */
 @media (max-width: 768px) {
   .projects-container {

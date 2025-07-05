@@ -7,20 +7,16 @@ import Navbar from "./Navbar.jsx";
 import Skills from "./Skills.jsx";
 import Education from "./Education.jsx";
 import Contact from "./Contact.jsx";
+import SmartPrepAI from "./SmartPrepAI.jsx";
+import Footer from "./footer.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projectsPage/*" element={<ProjectsPage />} />
-        <Route path="/about/*" element={<About />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <HomePage />
+      <Footer />
     </>
   );
 }

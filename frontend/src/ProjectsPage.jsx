@@ -1,84 +1,62 @@
-import {
-  Link,
-  Route,
-  Routes,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 
-const SIDE_MENU = [
-  { to: "counterApp", label: "Counter App" },
-  { to: "npmPackagesComparator", label: "NPM Comparator" },
-  { to: "productsApp", label: "Product App" },
-  { to: "budgetTracker", label: "Budget Tracker App" },
-  {
-    to: "/RestaurantApp/home.html",
-    label: "Restaurant App",
-    isExternal: true,
-  },
-  { to: "smartPrepAi", label: "SmartPrep AI" },
-];
-
 function ProjectsPage() {
-  const { pathname } = useLocation();
   const navigate = useNavigate();
-
-  const getClass = (path) => {
-    let __class = ["sidebar-item"];
-    if (`/projectsPage/${path}` === pathname) __class.push("bg-info");
-    return __class.join(" ");
-  };
 
   return (
     <div className="projects-container">
-      <div className="sidebar">
-        <hr />
-        {SIDE_MENU.map((item) =>
-          item.isExternal ? (
-            <a
-              href={item.to}
-              className={getClass(item.to)}
-              key={item.to}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.label}
-            </a>
-          ) : (
-            <Link to={item.to} className={getClass(item.to)} key={item.to}>
-              {item.label}
-            </Link>
-          )
-        )}
-      </div>
+      <div className="projects-grid">
+        <h2 className="projects-title">My Projects</h2>
+        <div className="projects-list">
+          <div
+            className="project-card"
+            onClick={() => navigate("/smartPrepAi")}
+          >
+            <img src="SPAI.png" className="card-image" alt="SmartPrep AI" />
+            <h3>SmartPrep AI</h3>
+            <p>AI-powered exam preparation</p>
 
-      <div className="main-content">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="default-message">
-                Please select a project from the sidebar.
-              </div>
+            <button className="view-project-btn">View Project</button>
+          </div>
+
+          <div
+            className="project-card"
+            onClick={() =>
+              window.open("https://quick-cart-app-brown.vercel.app/#", "_blank")
             }
-          />
-          {/* Other routes... */}
-          <Route
-            path="smartPrepAi"
-            element={
-              <div className="video-wrapper">
-                <div className="video-container">
-                  <video
-                    controls
-                    className="responsive-video"
-                    src="/videos/smartPrepAI.mp4"
-                  />
-                </div>
-              </div>
+          >
+            <img src="QC.png" className="card-image" alt="Quick Cart" />
+            <h3>Quick Cart</h3>
+            <p>E-commerce product listing</p>
+            <button className="view-project-btn">View Project</button>
+          </div>
+
+          <div
+            className="project-card"
+            onClick={() => window.open("/RestaurantApp/home.html", "_blank")}
+          >
+            <img src="RA.png" className="card-image" alt="Restaurant App" />
+            <h3>Restaurant App</h3>
+            <p>Restaurant menu and ordering</p>
+            <button className="view-project-btn">View Project</button>
+          </div>
+
+          <div
+            className="project-card"
+            onClick={() =>
+              window.open(
+                "https://budget-tracker-app-98ob.vercel.app/#",
+                "_blank"
+              )
             }
-          />
-        </Routes>
+          >
+            <img src="BT.png" className="card-image" alt="Budget Tracker" />
+            <h3>Budget Tracker App</h3>
+            <p>Track your expenses</p>
+            <button className="view-project-btn">View Project</button>
+          </div>
+        </div>
       </div>
     </div>
   );

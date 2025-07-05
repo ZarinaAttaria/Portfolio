@@ -2,11 +2,18 @@ import React from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import { ReactTyped } from "react-typed";
+import { Route, Routes } from "react-router-dom";
+import ProjectsPage from "./ProjectsPage";
+import About from "./About";
+import Contact from "./Contact";
+import Skills from "./Skills";
+import Education from "./Education";
+import Footer from "./footer";
 
 function HomePage() {
   return (
     <>
-      <div className="introContainer">
+      <div className="introContainer" id="home">
         <div className="intro">
           <h2 className="hello_heading">Hello, It's me </h2>
           <ReactTyped
@@ -32,19 +39,13 @@ function HomePage() {
               <img src="linkedin.png" className="icon1" />
             </a>
             <a
-              href="https://www.twitter.com"
+              href="https://x.com/Zareena1664709?t=clCbsgtgqWxROc2Ot3QHIg&s=09"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src="twitter.png" className="icon1" />
             </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="facebook.png" className="icon1" />
-            </a>
+
             <a
               href="https://www.instagram.com/zzareena__/?igsh=enVpZGFqazI5bWVq"
               target="_blank"
@@ -57,6 +58,23 @@ function HomePage() {
         <div className="myPhotoContainer">
           <img src="myPhoto.png" className="myPhoto" />
         </div>
+      </div>
+      <div>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <ProjectsPage />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
     </>
   );

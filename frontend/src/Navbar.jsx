@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link } from "react-scroll";
 function Navbar() {
   return (
-    <nav className="navbar home-navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar home-navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand navbar-portfolio" href="#">
           Zarina Attaria
@@ -22,32 +21,58 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarMenu">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="home" smooth={true} duration={500} className="nav-link">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/projectsPage" className="nav-link">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="nav-link"
+                offset={-70}
+              >
                 Projects
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="nav-link"
+              >
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/skills" className="nav-link">
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="nav-link"
+              >
                 Skills
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/education" className="nav-link">
+              <Link
+                to="education"
+                smooth={true}
+                duration={500}
+                className="nav-link"
+              >
                 Education
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link">
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="nav-link"
+              >
                 Contact
               </Link>
             </li>
