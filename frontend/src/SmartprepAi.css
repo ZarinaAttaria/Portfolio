@@ -1,0 +1,99 @@
+/* SmartPrep AI Video Page Styles */
+.smartprep-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.back-button {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e8f4fc;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  /* background: #000; */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.responsive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .smartprep-container {
+    padding: 1.5rem;
+  }
+
+  .video-wrapper {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .smartprep-container {
+    padding: 1rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .video-container {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartprep-container {
+    padding: 0.75rem;
+  }
+
+  .back-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .video-wrapper {
+    padding: 0;
+  }
+
+  .video-container {
+    border-radius: 0;
+  }
+}

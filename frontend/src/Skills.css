@@ -3,131 +3,230 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
   background-color: #e1e5f4;
-
   padding: 20px;
 }
 
 .skills-container {
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin: 0 auto;
 }
+
 .skills-Items-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 3%;
+  justify-content: center;
+  gap: 20px;
 }
+
 .unity {
   margin-bottom: 0;
 }
+
 .skills-Item {
   margin-top: 15px;
   height: 120px;
   width: 150px;
   background: #305170;
-
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   color: white;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
 }
+.skills-Item p {
+  margin: 1rem 1rem;
+}
+
+.skills-Item:hover {
+  transform: translateY(-5px);
+}
+
+/* Skill logos - standardized approach */
 .skill-logo {
-  margin-top: 10px;
-
-  width: 100px;
-  height: 80px;
-}
-.express-logo {
-  margin-top: 10px;
-
-  width: 70px;
+  width: 60px;
   height: 60px;
-}
-.vite-logo {
+  object-fit: contain;
   margin-top: 10px;
-
-  width: 70px;
-  height: 60px;
 }
-.redux-logo {
-  margin-top: 10px;
 
-  width: 70px;
-  height: 60px;
-}
-.javascript-logo {
-  margin-top: 10px;
-
-  width: 70px;
-  height: 60px;
-}
-.mongodb-logo {
-  margin-top: 10px;
-
-  width: 70px;
-  height: 60px;
-}
-.cplus-logo {
-  margin-top: 15px;
-
-  width: 70px;
-  height: 60px;
-}
-.html-logo {
-  margin-top: 10px;
-
-  width: 70px;
-  height: 70px;
-}
-.bootstrap-logo {
-  margin-top: 10px;
-
-  width: 70px;
-  height: 70px;
-}
-.java-logo {
-  margin-top: 10px;
-
-  width: 70px;
-  height: 60px;
-}
+/* Specific logo adjustments */
+.express-logo,
+.vite-logo,
+.redux-logo,
+.javascript-logo,
+.mongodb-logo,
+.cplus-logo,
+.java-logo,
 .mysql-logo {
-  margin-top: 5px;
-
-  width: 70px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
+
+.html-logo,
+.bootstrap-logo {
+  width: 55px;
+  height: 55px;
+}
+
 .nodejs {
   margin-top: 10px;
   margin-bottom: 0;
 }
+
 .skills-title {
   font-size: 2.5rem;
   color: #333;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 10px;
+  margin-left: 0px;
 }
-.skills-logo {
-  width: 100px;
-  height: 50px;
-  margin: 0;
+
+.skill1-logo {
+  width: 90px;
+  height: 70px;
+  margin: 0px;
 }
+
 .skills-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
+
 .abilities {
   color: #f39c12;
   margin-left: 10px;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 992px) {
+  .skills-container {
+    padding: 15px;
+  }
+
+  .skills-Item {
+    width: 130px;
+    height: 110px;
+    padding: 12px;
+  }
+
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .express-logo,
+  .vite-logo,
+  .redux-logo,
+  .javascript-logo,
+  .mongodb-logo,
+  .cplus-logo,
+  .java-logo,
+  .mysql-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-Item {
+    width: 120px;
+    height: 100px;
+  }
+
+  .skills-heading {
+    margin-top: 15px;
+  }
+
+  .skill1-logo {
+    width: 70px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-page {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .skills-container {
+    padding: 10px;
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-Items-container {
+    gap: 15px;
+  }
+
+  .skills-Item {
+    width: 100px;
+    height: 90px;
+    padding: 10px;
+  }
+
+  .skill-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .express-logo,
+  .vite-logo,
+  .redux-logo,
+  .javascript-logo,
+  .mongodb-logo,
+  .cplus-logo,
+  .java-logo,
+  .mysql-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .html-logo,
+  .bootstrap-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .abilities {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skills-Items-container {
+    gap: 10px;
+  }
+
+  .skills-Item {
+    width: 85px;
+    height: 80px;
+    font-size: 0.9em;
+  }
 }

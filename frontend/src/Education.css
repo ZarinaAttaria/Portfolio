@@ -84,3 +84,96 @@
   line-height: 1.6;
   text-align: justify;
 }
+
+@media (max-width: 1200px) {
+  .education-container {
+    width: 90%;
+  }
+
+  .institution-image {
+    width: 220px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .education-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .institution-image {
+    width: 200px;
+    height: 160px;
+  }
+
+  .education-institution {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .education-degree {
+    text-align: center;
+  }
+
+  .education-period {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-title {
+    font-size: 2rem;
+  }
+
+  .edu-logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .education-institution {
+    font-size: 1.4rem;
+  }
+
+  .education-degree {
+    font-size: 1.1rem;
+  }
+
+  .education-period {
+    font-size: 1rem;
+  }
+
+  .education-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-page {
+    padding: 10px;
+  }
+
+  .education-container {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  .education-title {
+    font-size: 1.8rem;
+  }
+
+  .edu-logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .institution-image {
+    width: 180px;
+    height: 140px;
+  }
+
+  .education-item {
+    padding: 15px;
+  }
+}

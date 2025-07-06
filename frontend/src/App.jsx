@@ -13,8 +13,6 @@ import Footer from "./footer.jsx";
 function App() {
   return (
     <>
-      <Navbar />
-
       <Routes>
         <Route
           path="/"

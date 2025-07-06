@@ -6,7 +6,7 @@ const Skills = () => {
     <div className="skills-page">
       <div>
         <div className="skills-heading">
-          <img src="skills.png" className="skills-logo" />
+          <img src="skills.png" className="skill1-logo" />
           <h1 className="skills-title">Skills & </h1>
           <h1 className="skills-title abilities">Abilities</h1>
         </div>
@@ -63,14 +63,6 @@ const Skills = () => {
             <div className="skills-Item">
               <img src="cplus.png" className="cplus-logo" />
               <p>C++</p>
-            </div>
-            <div className="skills-Item">
-              <img src="java.png" className="java-logo" />
-              <p>Java</p>
-            </div>
-            <div className="skills-Item">
-              <img src="Unity.png" className="skill-logo" />
-              <p className="unity">Unity</p>
             </div>
           </div>
         </div>

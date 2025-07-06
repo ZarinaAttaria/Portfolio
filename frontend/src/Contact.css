@@ -104,3 +104,80 @@ input {
   margin-left: 10px;
   color: purple;
 }
+@media (max-width: 992px) {
+  .contactcard {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contactus-title {
+    font-size: 2.2rem;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  .contact-image {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus-title {
+    font-size: 2rem;
+  }
+
+  .allPage {
+    padding: 15px;
+  }
+
+  .contactcard {
+    padding: 15px;
+  }
+
+  .submitBtn {
+    padding: 10px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactus-title {
+    font-size: 1.8rem;
+  }
+
+  .allPage {
+    padding: 10px;
+  }
+
+  .contactcard {
+    padding: 15px 10px;
+  }
+
+  input {
+    height: 45px;
+    padding-left: 35px;
+  }
+
+  .messageInput {
+    height: 90px;
+  }
+
+  .input-icon {
+    font-size: 1.3rem;
+    left: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contactus-title {
+    font-size: 1.6rem;
+  }
+
+  .submitBtn {
+    max-width: 140px;
+    font-size: 0.9rem;
+  }
+}

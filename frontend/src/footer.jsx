@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,16 +13,16 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="home">Home</Link>
             </li>
             <li>
-              <a href="/projects">Projects</a>
+              <Link to="projects">Projects</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="about">About</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link to="contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -50,7 +51,7 @@ const Footer = () => {
             >
               <FaTwitter className="icon" />
             </a>
-            <a href="zarinaattaria135@gmail.com">
+            <a href="mailto:zarinaattaria135@gmail.com" aria-label="Email">
               <FaEnvelope className="icon" />
             </a>
           </div>
@@ -59,11 +60,8 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Get In Touch</h3>
           <p>Have a project in mind or want to collaborate?</p>
-          <button
-            className="contact-btn"
-            onClick={() => (window.location.href = "/contact")}
-          >
-            Contact Me
+          <button className="contact-btn">
+            <Link to="contact"> Contact Me</Link>
           </button>
         </div>
       </div>
