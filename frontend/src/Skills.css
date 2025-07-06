@@ -55,7 +55,7 @@
 .skill-logo {
   width: 60px;
   height: 60px;
-  object-fit: contain;
+  object-fit: cover;
   margin-top: 10px;
 }
 
@@ -228,5 +228,82 @@
     width: 85px;
     height: 80px;
     font-size: 0.9em;
+  }
+}
+@media (max-width: 576px) {
+  .skills-page {
+    padding: 10px;
+    min-height: auto;
+    align-items: center; /* Re-center on mobile */
+  }
+
+  .skills-container {
+    padding: 15px 10px; /* Adjusted padding */
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .skills-Items-container {
+    gap: 12px; /* Reduced gap */
+    padding: 5px 0; /* Adjusted padding */
+  }
+
+  .skills-Item {
+    width: calc(50% - 20px); /* Flexible width calculation */
+    height: 100px;
+    padding: 10px;
+    margin-top: 0; /* Remove extra margin */
+  }
+
+  .skill-logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 431px) {
+  .skills-container {
+    padding: 12px 8px;
+  }
+
+  .skills-Items-container {
+    gap: 8px;
+  }
+
+  .skills-Item {
+    width: calc(50% - 10px); /* More precise calculation */
+    height: 90px;
+    padding: 8px;
+  }
+
+  .skill-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .skills-Item p {
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+  }
+
+  .skills-title {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills-Item {
+    width: calc(50% - 6px);
+    height: 85px;
+  }
+
+  .skill-logo {
+    width: 32px;
+    height: 32px;
   }
 }
