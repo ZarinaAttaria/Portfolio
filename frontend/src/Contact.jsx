@@ -17,7 +17,7 @@ const Contact = () => {
     <div className="allPage">
       <div className="contact-heading">
         <img
-          className="about-image"
+          className="edu-logo"
           src="https://img.icons8.com/?size=100&id=CCDYqb5KK5vI&format=png&color=000000"
         />
         <h1 className="contactus-title">Get In </h1>

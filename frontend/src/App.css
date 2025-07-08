@@ -611,6 +611,50 @@ html {
     height: 45px;
     width: 45px;
   }
+  .hello_heading {
+    font-size: 1rem;
+  }
+  .intro h3 {
+    font-size: 1rem;
+  }
+  .dev_Heading {
+    font-size: 1.2rem;
+    margin-left: 0px;
+  }
+  .name_Heading {
+    font-size: 1rem;
+  }
+  .name_Heading {
+    font-size: 1.5rem;
+  }
+  .intro h2 {
+    font-size: 1.2rem;
+  }
+  .navbar-toggler {
+    margin: 0px;
+  }
+  .navbar {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .iconsLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* Reduced gap between icons */
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding-bottom: 5px; /* Space for scrollbar */
+  }
+
+  .icon1 {
+    height: 30px; /* Reduced size */
+    width: 30px; /* Reduced size */
+    min-width: 30px; /* Prevent shrinking */
+    object-fit: contain;
+  }
 }
 @media (min-width: 1300px) {
   .content-container {
@@ -654,30 +698,4 @@ html {
   }
 }
 @media (max-width: 431px) {
-  ..hello_heading {
-    font-size: 1rem;
-  }
-  .intro h3 {
-    font-size: 1rem;
-  }
-  .dev_Heading {
-    font-size: 1.2rem;
-    margin-left: 0px;
-  }
-  .name_Heading {
-    font-size: 1rem;
-  }
-  .name_Heading {
-    font-size: 1.5rem;
-  }
-  .intro h2 {
-    font-size: 1.2rem;
-  }
-  .navbar-toggler {
-    margin: 0px;
-  }
-  .navbar {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
 }

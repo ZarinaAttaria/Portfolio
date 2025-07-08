@@ -89,12 +89,12 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 10px;
-  margin-left: 0px;
+  margin-left: 6px;
 }
 
 .skill1-logo {
-  width: 90px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   margin: 0px;
 }
 
@@ -104,7 +104,6 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  flex-wrap: wrap;
 }
 
 .abilities {
@@ -162,8 +161,9 @@
   }
 
   .skill1-logo {
-    width: 70px;
+    width: 35px;
     height: 35px;
+    margin: 0px;
   }
 }
 
