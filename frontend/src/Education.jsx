@@ -8,39 +8,45 @@ const education = [
     institution: "Bahria University",
     degree: "Bachelor of Science in Software Engineering",
     period: "2021 - 2025 | Completed",
-  },
-  {
-    picture:
-      "https://lh5.googleusercontent.com/p/AF1QipM-moVXGfNqCdJzfzYiVBulGpsnlNjRd_IVmsTP=w408-h320-k-no",
-    institution: "Punjab College",
-    degree: "Higher Secondary School Certificate",
-    period: "2019 - 2021 | Completed",
+    description:
+      "Specialized in full-stack web development, software architecture, and database systems. Graduated with honors.",
   },
 ];
 
 const Education = () => {
   return (
     <div className="education-page">
-      <div className="education-container">
-        <div className="myedu-heading">
-          <img src="Education.png" className="edu-logo" />
-          <h1 className="education-title">My </h1>
-          <h1 className="education-title title1">Education</h1>
-        </div>
-        <p className="education-para">
-          Education is not the learning of facts, but the training of the mind
-          to think.
-        </p>
-        {education.map((edu, index) => (
-          <div key={index} className="education-item ">
-            <img src={edu.picture} className="institution-image" />
-            <div>
-              <h2 className="education-institution">{edu.institution}</h2>
-              <p className="education-degree">{edu.degree}</p>
-              <p className="education-period">{edu.period}</p>
-            </div>
+      <div className="education-wrapper">
+        <div className="education-heading">
+          <div className="education-title-container">
+            <h1 className="education-title">My</h1>
+            <h1 className="education-title highlight">Education</h1>
           </div>
-        ))}
+        </div>
+
+        <div className="education-cards">
+          {education.map((edu, index) => (
+            <div key={index} className="education-card">
+              <div className="card-image-container">
+                <img
+                  src={edu.picture}
+                  className="institution-image"
+                  alt={edu.institution}
+                />
+                <div className="image-overlay"></div>
+              </div>
+              <div className="card-content">
+                <h2 className="institution-name">{edu.institution}</h2>
+                <div className="education-divider"></div>
+                <p className="degree-name">{edu.degree}</p>
+                <p className="education-period">
+                  <span className="period-icon">📅</span> {edu.period}
+                </p>
+                <p className="education-description">{edu.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

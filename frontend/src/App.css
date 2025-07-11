@@ -62,11 +62,6 @@ body {
   color: #f39c12;
 }
 
-.sideBarProjectsHeading {
-  margin-top: 10%;
-  margin-left: 5%;
-}
-
 .navItemsList {
   display: flex !important;
   align-items: center;
@@ -247,9 +242,6 @@ body {
 }
 
 /* Layout Adjustments */
-.projects-container {
-  display: flex;
-}
 
 .sidebar {
   width: 250px;
@@ -262,57 +254,6 @@ body {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-}
-/* Projects Grid Styles */
-.projects-container {
-  padding: 2rem;
-
-  background-color: #2c3e50;
-
-  min-height: 100vh;
-}
-.projects-grid {
-}
-.projects-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: white;
-}
-
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 1100px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.project-card {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-.project-card h3 {
-  margin: 1rem 1rem 0.5rem;
-  color: #2c3e50;
-}
-
-.project-card p {
-  margin: 0 1rem 1rem;
-  color: #7f8c8d;
-  font-size: 0.9rem;
 }
 
 .video-indicator {
@@ -355,21 +296,6 @@ body {
   width: 100%;
   height: 100%;
 }
-.project-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover::after {
-  opacity: 1;
-}
 
 .view-project-btn {
   position: absolute;
@@ -388,20 +314,6 @@ body {
   cursor: pointer;
 }
 
-.project-card:hover .view-project-btn {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.view-project-btn:hover {
-  background-color: #2980b9;
-}
-.card-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-}
 /* In your CSS file */
 html {
   scroll-behavior: smooth;
@@ -412,47 +324,16 @@ html {
   color: #3498db;
   border-bottom: 2px solid #3498db;
 }
-.Project-title-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.project-title {
-  font-size: 2.5rem;
-  color: white;
-  text-align: center;
-  margin-top: 10px;
-  font-weight: 600;
-}
+
 .mee {
   margin-left: 10px;
   color: #3498db;
 }
-.project-image {
-  height: 60px;
-  width: 60px;
-  margin-right: 10px;
-}
-@media (max-width: 900px) {
-  .project-card {
-    flex: 0 0 calc(50% - 1.5rem); /* 2 items per row on medium screens */
-    max-width: calc(50% - 1.5rem);
-  }
-}
 
 @media (max-width: 600px) {
-  .project-card {
-    flex: 0 0 100%; /* 1 item per row on small screens */
-    max-width: 100%;
-  }
 }
 /* Responsive Behavior */
 @media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-  }
-
   .sidebar {
     width: 100%;
     display: flex;
@@ -501,9 +382,7 @@ html {
     border-radius: 5px;
     z-index: 999;
   }
-  .project-title {
-    font-size: 1.8rem;
-  }
+
   .navbar-menu.show {
     display: flex;
   }
@@ -607,10 +486,7 @@ html {
   .name_Heading {
     font-size: 2.3em;
   }
-  .project-image {
-    height: 45px;
-    width: 45px;
-  }
+
   .hello_heading {
     font-size: 1rem;
   }

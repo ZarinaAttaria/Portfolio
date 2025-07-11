@@ -1,146 +1,309 @@
+/* About.css */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #4d44db;
+  --dark-color: #2a2a72;
+  --light-color: #f8f9fa;
+  --text-color: #333;
+  --text-light: #555;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
 .about-page {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: white;
-  padding: 20px;
+  background-color: #f5f7ff;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-wrapper {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .about-heading {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.logo-container {
+  background-color: var(--primary-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-right: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.logo-container:hover {
+  transform: translateY(-5px);
 }
 
 .about-image {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 2.2rem;
+
+  color: var(--text-color);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.me {
+  margin-left: 1rem;
+  color: var(--primary-color);
+  position: relative;
 }
 
 .about-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 10px;
+  background: white;
+  border-radius: 15px;
   overflow: hidden;
-  background: #e1e5f4;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
-.about-description-container {
-  max-width: 600px;
-}
-
-.myPicture {
-  width: 300px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10%;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 0 0 10px;
+.about-container:hover {
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
 }
 
 .about-content {
   display: flex;
-  padding: 20px;
-  flex: 1;
-  gap: 5%;
+  padding: 2rem;
+  gap: 3rem;
 }
 
-.about-title {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
-  margin-top: 10px;
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myPicture {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.myPicture:hover {
+  transform: scale(1.02);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.about-description-container {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+.greeting span {
+  color: var(--primary-color);
+}
+
+.job-title {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin-bottom: 2rem;
+  border-radius: 2px;
 }
 
 .about-description {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  text-align: justify;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
 }
 
-.me {
-  margin-left: 10px;
-  color: purple;
+.contact-info {
+  margin: 1.5rem 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--text-light);
 }
 
 .icon2 {
-  color: rgb(15, 65, 216);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-right: 0.8rem;
 }
 
 .download-cv-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.8rem;
+  background-color: var(--primary-color);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  width: fit-content;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.download-cv-button:hover {
+  background-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(108, 99, 255, 0.4);
+}
+
+.download-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
 }
 
 /* Responsive styles */
 @media (max-width: 992px) {
   .about-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+  }
+
+  .image-container {
+    align-items: center;
   }
 
   .myPicture {
-    width: 250px;
-    height: 300px;
+    max-width: 300px;
+  }
+
+  .about-description-container {
+    text-align: center;
+  }
+
+  .divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-cv-button {
     margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
-  .about-container {
+  .about-heading {
     flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo-container {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .title-container {
+    flex-direction: column;
+  }
+
+  .me {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .greeting {
+    font-size: 1.5rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page {
+    padding: 1rem;
+  }
+
+  .about-content {
+    padding: 1.5rem;
   }
 
   .about-title {
     font-size: 2rem;
   }
 
+  .greeting {
+    font-size: 1.3rem;
+  }
+
   .about-description {
-    font-size: 0.9rem;
-  }
-
-  .myPicture {
-    width: 200px;
-    height: 250px;
-  }
-}
-
-@media (max-width: 576px) {
-  .about-page {
-    padding: 10px;
-  }
-
-  .about-content {
-    padding: 15px;
-  }
-
-  .about-title {
-    font-size: 1.8rem;
-  }
-
-  .myPicture {
-    width: 180px;
-    height: 220px;
+    font-size: 0.95rem;
   }
 
   .download-cv-button {
-    padding: 8px 16px;
+    padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
   }
 }

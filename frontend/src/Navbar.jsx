@@ -1,39 +1,68 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import "./Navbar.css";
+
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <nav className="navbar home-navbar navbar-expand-lg bg-body-tertiary fixed-top">
-      <div className="container-fluid">
-        <a className="navbar-brand navbar-portfolio" href="#">
-          Zarina Attaria
-        </a>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="navbar-container">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          className="navbar-brand"
+          onClick={closeMobileMenu}
+        >
+          <span className="name-highlight">Zarina</span> Attaria
+        </Link>
+
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarMenu"
-          aria-controls="navbarMenu"
-          aria-expanded="false"
+          className={`navbar-toggler ${mobileMenuOpen ? "open" : ""}`}
+          onClick={toggleMobileMenu}
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon">☰</span>
+          <span className="toggler-icon"></span>
+          <span className="toggler-icon"></span>
+          <span className="toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarMenu">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to="home" smooth={true} duration={500} className="nav-link">
-                Home
-              </Link>
-            </li>
+
+        <div className={`navbar-menu ${mobileMenuOpen ? "open" : ""}`}>
+          <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                to="projects"
+                to="home"
                 smooth={true}
                 duration={500}
                 className="nav-link"
-                offset={-70}
+                onClick={closeMobileMenu}
+                spy={true}
+                activeClass="active"
               >
-                Projects
+                Home
               </Link>
             </li>
             <li className="nav-item">
@@ -42,6 +71,10 @@ function Navbar() {
                 smooth={true}
                 duration={500}
                 className="nav-link"
+                onClick={closeMobileMenu}
+                spy={true}
+                activeClass="active"
+                offset={-80}
               >
                 About
               </Link>
@@ -52,8 +85,26 @@ function Navbar() {
                 smooth={true}
                 duration={500}
                 className="nav-link"
+                onClick={closeMobileMenu}
+                spy={true}
+                activeClass="active"
+                offset={-80}
               >
                 Skills
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="nav-link"
+                onClick={closeMobileMenu}
+                spy={true}
+                activeClass="active"
+                offset={-80}
+              >
+                Projects
               </Link>
             </li>
             <li className="nav-item">
@@ -62,6 +113,10 @@ function Navbar() {
                 smooth={true}
                 duration={500}
                 className="nav-link"
+                onClick={closeMobileMenu}
+                spy={true}
+                activeClass="active"
+                offset={-80}
               >
                 Education
               </Link>
@@ -71,7 +126,11 @@ function Navbar() {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className="nav-link"
+                className="nav-link contact-link"
+                onClick={closeMobileMenu}
+                spy={true}
+                activeClass="active"
+                offset={-80}
               >
                 Contact
               </Link>

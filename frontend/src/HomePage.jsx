@@ -1,89 +1,140 @@
 import React from "react";
-import "./App.css";
-import Navbar from "./Navbar";
+import "./HomePage.css";
 import { ReactTyped } from "react-typed";
-import { Route, Routes } from "react-router-dom";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+  FaGithub,
+} from "react-icons/fa";
+import Navbar from "./Navbar";
 import ProjectsPage from "./ProjectsPage";
 import About from "./About";
 import Contact from "./Contact";
 import Skills from "./Skills";
 import Education from "./Education";
 import Footer from "./footer";
-
 function HomePage() {
   return (
-    <>
+    <div className="portfolio-container">
       <Navbar />
 
-      <div id="home">
-        <div className="introContainer">
-          <div className="intro">
-            <h2 className="hello_heading">Hello, It's me </h2>
-            <ReactTyped
-              strings={["Zarina Attaria"]}
-              typeSpeed={100}
-              className="name_Heading"
-            />
-            <div className="dev_Container">
-              <h3 className="i_am_heading">I am a </h3>
-              <ReactTyped
-                strings={["Web Developer"]}
-                typeSpeed={100}
-                className="dev_Heading"
-              />
+      {/* Hero Section */}
+      <section id="home" className="hero-section">
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="intro-text">
+              <h2 className="greeting">Hello, It's me</h2>
+              <div className="name-container">
+                <ReactTyped
+                  strings={["Zarina Attaria"]}
+                  typeSpeed={100}
+                  className="name"
+                  cursorChar=""
+                />
+              </div>
+              <div className="title-container">
+                <h3 className="title-prefix">I am a</h3>
+                <ReactTyped
+                  strings={[
+                    "Web Developer",
+                    "MERN Stack Developer",
+                    "Frontend Developer",
+                    "Software Engineer",
+                  ]}
+                  typeSpeed={100}
+                  backSpeed={50}
+                  loop
+                  className="title"
+                  cursorChar="|"
+                />
+              </div>
             </div>
 
-            <div className="iconsLinks">
+            <div className="social-links">
               <a
                 href="https://www.linkedin.com/in/zarina-attaria-a2134427a"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="social-link"
               >
-                <img src="linkedin.png" className="icon1" />
+                <FaLinkedin className="social-icon" />
               </a>
               <a
-                href="https://x.com/Zareena1664709?t=clCbsgtgqWxROc2Ot3QHIg&s=09"
+                href="https://x.com/Zareena1664709"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="social-link"
               >
-                <img src="twitter.png" className="icon1" />
+                <FaTwitter className="social-icon" />
               </a>
-
               <a
-                href="https://www.instagram.com/zzareena__/?igsh=enVpZGFqazI5bWVq"
+                href="https://github.com/ZarinaAttaria"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="social-link"
               >
-                <img src="instagram (1).png" className="icon1" />
+                <FaGithub className="social-icon" />
               </a>
-              <a href="mailto:zarinaattaria135@gmail.com" aria-label="Email">
-                <img src="mail.png" className="icon1" />
+              <a
+                href="https://www.instagram.com/zzareena__"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaInstagram className="social-icon" />
+              </a>
+              <a
+                href="mailto:zarinaattaria135@gmail.com"
+                className="social-link"
+              >
+                <FaEnvelope className="social-icon" />
               </a>
             </div>
+
+            <a href="#about" className="cta-button">
+              Explore My Work
+            </a>
           </div>
-          <div className="myPhotoContainer">
-            <img src="myPhoto.png" className="myPhoto" />
+
+          <div className="hero-image-container">
+            <div className="image-wrapper">
+              <img
+                src="myPhoto.png"
+                className="hero-image"
+                alt="Zarina Attaria"
+              />
+              <div className="image-border"></div>
+              <div className="image-dots"></div>
+            </div>
           </div>
         </div>
-        <div>
-          <section id="about">
-            <About />
-          </section>
-          <section id="projects">
-            <ProjectsPage />
-          </section>
-          <section id="skills">
-            <Skills />
-          </section>
-          <section id="education">
-            <Education />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
-        </div>
-      </div>
-    </>
+      </section>
+
+      {/* About Section */}
+      <section id="about">
+        <About />
+      </section>
+      {/* Projects Section */}
+      <section id="projects">
+        <ProjectsPage />
+      </section>
+      {/* Skills Section */}
+      <section id="skills">
+        <Skills />
+      </section>
+
+      {/* Education Section */}
+      <section id="education">
+        <Education />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 }
 

@@ -2,69 +2,85 @@ import React from "react";
 import {
   BiLogoInstagram,
   BiLogoLinkedin,
-  BiLogoLinkedinSquare,
+  BiLogoGithub,
   BiMailSend,
   BiPhoneCall,
   BiSend,
   BiSupport,
   BiUser,
 } from "react-icons/bi";
-
 import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="allPage">
-      <div className="contact-heading">
-        <img
-          className="edu-logo"
-          src="https://img.icons8.com/?size=100&id=CCDYqb5KK5vI&format=png&color=000000"
-        />
-        <h1 className="contactus-title">Get In </h1>
-        <h1 className="contactus-title touch">Touch</h1>
-      </div>
+    <div className="contact-page">
+      <div className="contact-wrapper">
+        <div className="contact-heading">
+          <div className="contact-title-container">
+            <h1 className="contact-title">Get In</h1>
+            <h1 className="contact-title highlight">Touch</h1>
+          </div>
+        </div>
 
-      <div className=" contactus">
-        <div className="contactcard">
-          <img src="contact.png" className="contact-image" />
-          <div>
-            <form className="contact-form">
-              <label>
-                <div className="input-container">
-                  <BiUser className="input-icon" />
-                  <input type="text" placeholder="Name" />
+        <div className="contact-content">
+          <div className="contact-card">
+            <div className="contact-image-container">
+              <img
+                src="contact.png"
+                className="contact-image"
+                alt="Contact illustration"
+              />
+            </div>
+
+            <div className="contact-form-container">
+              <form className="contact-form">
+                <h3 className="form-title">Send Me a Message</h3>
+                <div className="form-group">
+                  <div className="input-container">
+                    <BiUser className="input-icon" />
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="form-input"
+                    />
+                  </div>
                 </div>
-              </label>
-              <label>
-                <div className="input-container">
-                  <BiMailSend className="input-icon" />
-                  <input type="email" placeholder="Email" />
+                <div className="form-group">
+                  <div className="input-container">
+                    <BiMailSend className="input-icon" />
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      className="form-input"
+                    />
+                  </div>
                 </div>
-              </label>
-              <label>
-                <div className="input-container">
-                  <BiPhoneCall className="input-icon" />
-                  <input type="text" placeholder="Phone" />
+                <div className="form-group">
+                  <div className="input-container">
+                    <BiPhoneCall className="input-icon" />
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      className="form-input"
+                    />
+                  </div>
                 </div>
-              </label>
-              <label>
-                <div className="input-container">
-                  <BiSupport className="input-icon" />
-                  <input
-                    type="text"
-                    placeholder="Message"
-                    className="messageInput"
-                  />
+                <div className="form-group">
+                  <div className="input-container">
+                    <BiSupport className="input-icon" />
+                    <textarea
+                      placeholder="Your Message"
+                      className="form-textarea"
+                      rows="4"
+                    ></textarea>
+                  </div>
                 </div>
-              </label>
-              <div className="submit-container">
-                <input
-                  type="submit"
-                  placeholder="Submit"
-                  className="submitBtn"
-                />
-              </div>
-            </form>
+                <button type="submit" className="submit-btn">
+                  <BiSend className="submit-icon" />
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
