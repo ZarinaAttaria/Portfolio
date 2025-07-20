@@ -18,6 +18,16 @@ function ProjectsPage() {
     },
     {
       id: 2,
+      title: "ZeState",
+      description:
+        "Helps in finding, Buy, and Invest in Dubai's Top Real Estate",
+      image: "Zestate.png",
+      tags: ["React", "Redux", "CSS"],
+      link: "https://zestate.vercel.app/",
+      github: "#",
+    },
+    {
+      id: 32,
       title: "Quick Cart",
       description: "E-commerce product listing with cart functionality",
       image: "QC.png",
@@ -26,7 +36,7 @@ function ProjectsPage() {
       github: "#",
     },
     {
-      id: 3,
+      id: 4,
       title: "Restaurant App",
       description: "Menu browsing and food ordering system",
       image: "RA.png",
@@ -35,7 +45,7 @@ function ProjectsPage() {
       github: "#",
     },
     {
-      id: 4,
+      id: 5,
       title: "Budget Tracker",
       description: "Track expenses with visual analytics",
       image: "BT.png",
